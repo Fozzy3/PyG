@@ -1,6 +1,14 @@
-const myFunction = require('../public/script');
-const nodemailer = require('nodemailer');
 const router = require('express').Router();
+
+const admin = require('firebase-admin')
+const serviceAccount = require('../../pyqconsultores-bd4bc-firebase-adminsdk-zy58m-376ff36e28.json');
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: 'https://pyqconsultores-bd4bc-default-rtdb.firebaseio.com/'
+})
+
+const db = admin.database();
 
 router.get('/', (req, res) => {
     res.render('index');
@@ -20,40 +28,15 @@ router.get('/contacto', (req, res) =>{
 
 //Enviar Correo Electronico
 
-router.post('/send-email', async (req, res) =>{
-    const {name, email, phone, message} = req.body;
-
-    contentHtml = `
-    
-    <h1>User information</h1>
-    <ul>
-        <li>Username: ${name}</li>
-        <li>Email: ${email}</li>
-        <li>Phono: ${phone}</li>
-        <p>${message}</p>
-    </ul>
-
-    `;
-
-    const transporter = nodemailer.createTransport({
-        host: ' ',
-        port: 26,
-        secure: false,
-        auth: {
-            user: ' ', //correo
-            pass: ' ' //Contraseña
-        }
-    });
-
-    const info = await transporter.sendMail({
-        from: '',
-        to: '', //correo al que llegara
-        subject: 'Website contact from',
-        text: 'Hello world'
-    })
-
-    console.log('Message sent', info.messageId); 
-    res.send('recibido')
+router.post('/send-data', (req, res) => {
+    const newContanct = {
+        nombre: req.body.name,
+        mail: req.body.mail,
+        telefono: req.body.phone,
+        mensaje: req.body.message
+    };
+    db.ref('posibles-clientes').push(newContanct);
+    res.redirect('/contacto');
 })
 
 module.exports = router;

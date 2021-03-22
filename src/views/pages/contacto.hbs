@@ -12,22 +12,22 @@
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-body">
-                    <form action="/send-email" method="POST">
+                    <form id="task-form" action="/send-data" method="POST">
 
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Name" autofocus>
+                            <input type="text" name="name" class="form-control" placeholder="Name "id="name" autofocus>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="email" placeholder="Email" class="form-control">
+                            <input type="text" name="mail" placeholder="Email" class="form-control" id="mail">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="phone" placeholder="Phone" class="form-control">
+                            <input type="text" name="phone" placeholder="Phone" class="form-control"id="phone">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="message" placeholder="Message" class="form-control">
+                            <input type="text" name="message" placeholder="Message" class="form-control" id="text">
                         </div>
 
                         <button class="btn btn-primary btn-block">
