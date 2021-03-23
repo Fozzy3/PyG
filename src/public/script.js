@@ -1,12 +1,4 @@
-const admin = require('firebase-admin');
-const serviceAccount = require("C:/Users/USUARIO/OneDrive/Documentos/Diseño paginas web/PyG/pyqconsultores-bd4bc-firebase-adminsdk-zy58m-b6ea04a1ce.json");
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-   databaseURL: 'https://pyqconsultores.firebaseio.com'
-});
-
-const db = admin.firestore();
 
 /* ****** Animaciones ****** */
 if (typeof (window) !== 'undefined') {

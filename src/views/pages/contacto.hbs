@@ -5,6 +5,13 @@
 </div>
 {{/each}}
 
+{{#each good }}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/each}}
+
 <div class="presentacion1">
     <div class="contacto">
         <img src="https://i.imgur.com/62s2LjP.png" title="Contacto" />
@@ -37,7 +44,7 @@
                             <input type="text" name="message" placeholder="Message" class="form-control" id="text">
                         </div>
 
-                        <button class="btn btn-primary btn-block">
+                        <button class="btn btn-primary btn-block"id="send">
                             Send
                         </button>
 
