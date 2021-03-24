@@ -40,14 +40,13 @@ router.get('/contacto/como-llegar', (req, res) => {
     res.render('contacto/mapa')
 })
 
-router.get('/contacto/pongase-en-contacto', (req, res) => {
+router.get('/contacto/proteccion-datos', (req, res) => {
     res.render('contacto/proteccion-datos')
 })
 
 router.post('/formulario', async  (req, res) => {
     const { name, email, phone, message, company} = req.body;
     const errors = [];
-    const good = [];
 
     if(!name || !email || !phone || !message|| !company ){
         errors.push({text: 'Por favor complete todos los datos para continuar'});
