@@ -32,7 +32,7 @@ router.get('/contacto/formulario', (req, res) => {
     res.render('contacto/formulario')
 })
 
-router.get('/contacto/agradecimiento-contacto', (req, res) => {
+router.get('/contacto/formulario/agradecimiento-contacto', (req, res) => {
     res.render('contacto/agradecimiento');
 });
 
@@ -44,30 +44,30 @@ router.get('/contacto/pongase-en-contacto', (req, res) => {
     res.render('contacto/proteccion-datos')
 })
 
-router.post('/send-data', async (req, res) => {
-    const { name, mail, phone, message, company} = req.body;
+router.post('/formulario', async  (req, res) => {
+    const { name, email, phone, message, company} = req.body;
     const errors = [];
     const good = [];
 
-    if(!name || !mail || !phone || !message|| !company ){
+    if(!name || !email || !phone || !message|| !company ){
         errors.push({text: 'Por favor complete todos los datos para continuar'});
     }
     if(errors.length > 0){
-        res.render('pages/contacto', {
+        res.render('contacto/formulario', {
             errors,
         });
     } 
     else {
         const newContanct = {
             nombre: req.body.name,
-            mail: req.body.mail,
+            email: req.body.email,
             telefono: req.body.phone,
             mensaje: req.body.message,
             empresa: req.body.company
         };
         
-        await db.ref('posibles-clientes').push(newContanct);
-        res.redirect('/contacto/agradecimiento-contacto');
+        db.ref('posibles-clientes').push(newContanct);
+        res.redirect('/contacto/formulario/agradecimiento-contacto');
     }
 })
 
