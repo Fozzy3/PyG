@@ -455,6 +455,19 @@ footer {
 .contenedor-noticias .card:hover .box .contenido a {
     background: #ff568f;
 }
+/****** Politicas de privacidad ******/
+
+.politicas{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0em 2em 0em;
+}
+
+h4{
+    margin: 1em 0em 1em 0em;
+}
+
+
 
 /****** Responsive ******/
 
