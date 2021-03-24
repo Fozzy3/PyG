@@ -5,7 +5,6 @@
 </div>
 {{/each}}
 
-
 <div class="presentacion1">
     <div class="contacto">
         <img src="https://i.imgur.com/62s2LjP.png" title="Contacto" />
@@ -15,9 +14,43 @@
     </div>
 </div>
 
-<div class="container p-4">
+<section class="get_in_touch">
+    <h1 class="title">Contactanos</h1>
+    <div class="container">
+        <div class="contact-form row">
+            <form id="task-form" action="/send-data" method="POST">
+                <div class="form-field col-lg-12">
+                    <input id="name" class="input-text" type="text" name="name">
+                    <label for="name" class="label">name</label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input id="email" class="input-text" type="email" name="email">
+                    <label for="email" class="label">email</label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input id="company" class="input-text" type="text" name="company">
+                    <label for="company" class="label">company</label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input id="phone" class="input-text" type="text" name="phone">
+                    <label for="phone" class="label">contact number</label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input id="message" class="input-text" type="text" name="mess">
+                    <label for="message" class="label">Message</label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input class="submit-btn" type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+{{!-- 
+<div class="container p-5">
     <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-md-8 offset-md-2">
             <div class="card">
                 <div class="card-body">
                     <form id="task-form" action="/send-data" method="POST">
@@ -37,8 +70,11 @@
                         <div class="form-group">
                             <input type="text" name="message" placeholder="Message" class="form-control" id="text">
                         </div>
-
-                        <button class="btn btn-primary btn-block"id="send">
+                        <div class="form-group">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button class="btn btn-primary btn-block">
                             Send
                         </button>
 
@@ -47,4 +83,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

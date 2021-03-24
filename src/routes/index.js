@@ -45,11 +45,11 @@ router.get('/contacto/pongase-en-contacto', (req, res) => {
 })
 
 router.post('/send-data', async (req, res) => {
-    const { name, mail, phone, message } = req.body;
+    const { name, mail, phone, message, company} = req.body;
     const errors = [];
     const good = [];
 
-    if(!name || !mail || !phone || !message) {
+    if(!name || !mail || !phone || !message|| !company ){
         errors.push({text: 'Por favor complete todos los datos para continuar'});
     }
     if(errors.length > 0){
@@ -62,7 +62,8 @@ router.post('/send-data', async (req, res) => {
             nombre: req.body.name,
             mail: req.body.mail,
             telefono: req.body.phone,
-            mensaje: req.body.message
+            mensaje: req.body.message,
+            empresa: req.body.company
         };
         
         await db.ref('posibles-clientes').push(newContanct);
