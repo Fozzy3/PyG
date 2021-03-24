@@ -22,15 +22,32 @@ router.get('/actualidad', (req, res) => {
     res.render('pages/actualidad');
 });
 
+// Pagina de Contacto
+
 router.get('/contacto', (req, res) => {
     res.render('pages/contacto');
 });
 
-//Enviar Correo Electronico
+router.get('/contacto/formulario', (req, res) => {
+    res.render('contacto/formulario')
+})
+
+router.get('/contacto/agradecimiento-contacto', (req, res) => {
+    res.render('contacto/agradecimiento');
+});
+
+router.get('/contacto/como-llegar', (req, res) => {
+    res.render('contacto/mapa')
+})
+
+router.get('/contacto/pongase-en-contacto', (req, res) => {
+    res.render('contacto/proteccion-datos')
+})
 
 router.post('/send-data', async (req, res) => {
     const { name, mail, phone, message } = req.body;
     const errors = [];
+    const good = [];
 
     if(!name || !mail || !phone || !message) {
         errors.push({text: 'Por favor complete todos los datos para continuar'});
@@ -38,19 +55,18 @@ router.post('/send-data', async (req, res) => {
     if(errors.length > 0){
         res.render('pages/contacto', {
             errors,
-            name
         });
-    }
+    } 
     else {
-
         const newContanct = {
             nombre: req.body.name,
             mail: req.body.mail,
             telefono: req.body.phone,
             mensaje: req.body.message
         };
+        
         await db.ref('posibles-clientes').push(newContanct);
-        res.redirect('/');
+        res.redirect('/contacto/agradecimiento-contacto');
     }
 })
 
