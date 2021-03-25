@@ -1,17 +1,23 @@
+/********************* Fuentes *********************/
+
 @import url(https://fonts.googleapis.com/css?family=Lato:300|Montserrat:700,400);
 
 :root {
     --color-gris: #202020;
     --color-amarillo: #FACB0A;
     --color-azul: #01AEF2;
+    --color-fondo: #FEFEFF;
 }
+
+/********************* Etiquedas de raiz *********************/
 
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    background: var(--color-fondo);
 }
 
-h1{
+h1 {
     font-family: 'Montserrat';
 }
 
@@ -29,6 +35,8 @@ h5 {
     margin-right: 0;
     margin-left: 0;
 }
+
+/********************* Nabvar *********************/
 
 .navbar {
     background-color: #fff !important;
@@ -58,6 +66,27 @@ h5 {
     font-size: 18px;
 }
 
+.logo {
+    width: 130px;
+    margin: 1px;
+    padding: 0px;
+}
+
+/********************* Carrusel *********************/
+
+.carousel-inner {
+    height: 70vh;
+}
+
+img,
+svg {
+    vertical-align: top;
+    object-fit: cover;
+    display: inline;
+}
+
+/********************* Cuadro amarillo *********************/
+
 .amarillo {
     z-index: 4;
     display: block;
@@ -86,90 +115,124 @@ h5 {
 
 }
 
-.subtitulo{
-    z-index: 2;
+/********************* Nosotros *********************/
+
+.nosotros-seccion {
+    margin: 4rem 0rem 0rem 0rem;
 }
-.subtitulo span{
-    background-color: rgb(231, 231, 231);
-    padding: 0 15px;
+
+.subtitulo {
+    z-index: 2;
+    width: 100%;
+    font-family: 'Montserrat';
+    height: 2rem;
+}
+
+.subtitulo span {
+    background-color: var(--color-fondo);
+    padding: 0 1.5rem;
     z-index: 99;
     position: relative;
 }
-.subtitulo::after{
+
+.subtitulo::after {
     content: "";
     display: inline-block;
     height: 2px;
-    width: 100%;
+    width: 80vw;
     background: #01AEF2;
     position: relative;
-    top: -45px;
+    top: -55px;
     z-index: 1;
-
 }
 
-.texto span{
-    color:#01AEF2; 
+.texto span {
+    color: #01AEF2;
+    width: 100%;
 }
 
-.texto figure{
+.texto figure {
     font-size: 14px;
     width: 80%;
 }
 
+/********************* Animacion de los btn en Inicio (Servicios) *********************/
+
+.contenido figure {
+    display: block;
+    margin: auto;
+    position: relative;
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 0rem 3rem 0rem 3rem;
+    cursor: pointer;
+}
+
+.contenido figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+
+}
+
+.contenido figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #01aef283;
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenido figure:hover>.capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenido figure:hover>.capa h5 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.contenido figure:hover>img {
+    transform: scale(1.3);
+}
+
+.contenido figure .capa h5 {
+    color: #fff;
+    font-weight: 400px;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 20px;
+}
+
+.contenido figure .capa p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+/*********************  Imagen Contactanos *********************/
 
 .w-100 {
     width: 100%;
     height: 750px;
 }
 
-img,
-svg {
-    vertical-align: top;
-    object-fit: cover;
-    display: inline;
-}
-
-.logo {
-    width: 130px;
-    margin: 1px;
-    padding: 0px;
-}
-
-.servicios {
-    margin: 1rem 0rem 1rem 0rem;
-}
-
-.servicios img {
-    width: 300px;
-    height: 200px;
-    border-radius: 0rem 3rem 0rem 3rem;
-    object-fit: cover;
-}
-
-.boton {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    border-radius: 4rem;
-    width: 50%;
-    height: 12%;
-    border: none;
-    background: var(--color-azul);
-    color: #fff;
-
-}
-
-.contenedor {
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-/****** Footer ******/
-
 .llamanos img {
     width: 100%;
     height: 40vh;
 }
+
+/*********************  Footer *********************/
 
 footer {
     background-color: var(--color-amarillo);
@@ -177,7 +240,7 @@ footer {
     width: 100%;
 }
 
-/****** SERVICIOS ******/
+/*********************  Pagina Servicios *********************/
 
 .imgservicios img {
     width: 110%;
@@ -250,139 +313,65 @@ footer {
     /* Centrar Imagenes*/
     display: block;
     margin: auto;
-    /*******************/
     width: 50%;
     object-fit: cover;
 }
-/****** CONTACTO ******/
 
-.contacto img{
-    width: 100%;
-    height: 35vh;
-    position: relative;
-}
-.contactotitulo{
-    justify-content: center;
-}
-.contactotitulo h1{
-    position: absolute;
-    top:26%;
-    text-align: center;
-}
-/****** anim botones ******/
+/*********************  Pagina de Actualidad *********************/
 
-.contenido figure{
-    display:block;
-    margin:auto;
-    position:relative;
-    height: 200px;
-    width: 300px;
-    overflow: hidden;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
-    border-radius: 0rem 3rem 0rem 3rem;
-    cursor: pointer;
-}
-
-.contenido figure img{
-    width: 100%;
-    height: 100%;
-    transition: all 500ms ease-out;
-    
-}
-
-.contenido figure .capa{
-    position: absolute;
-    top:0;
-    width: 100%;
-    height: 100%;
-    background: #01aef283;
-    transition: all 500ms ease-out;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center;
-}
-
-.contenido figure:hover > .capa{
-    opacity: 1;
-    visibility: visible;
-}
-
-.contenido figure:hover > .capa h5{
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
-
-.contenido figure:hover > img{
-    transform: scale(1.3);
-}
-.contenido figure .capa h5{
-    color: #fff;
-    font-weight: 400px;
-    margin-bottom: 120px;
-    transition: all 500ms ease-out;
-    margin-top: 20px;
-}
-
-.contenido figure .capa p{
-    color: #fff;
-    font-size: 15px;
-    line-height: 1;
-    width: 100%;
-    max-width: 220px;
-    margin: auto;
-}
-
-/********Actualidad***********/
-
-.actualidad{
+.actualidad {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 15vh;
 }
 
+/*********************  Animacion de las tarjetas (Noticias) *********************/
 
-.list-group-item, .list-group-item.active{
-  width: 61%;
-  color: fff;
-  position: relative;
-  display: block;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  color: #3e4348;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+.list-group-item,
+.list-group-item.active {
+    width: 61%;
+    color: fff;
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #3e4348;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.list-group-item:hover{
+.list-group-item:hover {
     background: linear-gradient(45deg, #BCCEA3, #f8f78e);
     color: rgb(22, 22, 22);
     border: none;
     width: 62%;
-}   
+}
 
-.list-group{
+.list-group {
     position: fixed;
-    left: 20px  ;
+    left: 20px;
     width: 20%;
 }
 
-.scrollspy-example{
+.scrollspy-example {
     user-select: none;
 }
-.scrollspy-example h4{
+
+.scrollspy-example h4 {
     margin: 20px;
 }
 
-
-.actualidad-pagina{ 
+.actualidad-pagina {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-.actualidad-pagina .row{ 
+
+.actualidad-pagina .row {
     width: 70%;
 }
+
 .contenedor-noticias {
     display: flex;
     justify-content: space-around;
@@ -395,11 +384,11 @@ footer {
     position: relative;
     width: 320px;
     height: 440px;
-    box-shadow: 
-                inset 5px 5px 5px rgba(0,0,0,0.05),
-                inset -5px -5px 5px rgba(255,255,255,0.5),
-                5px 5px 5px rgba(0,0,0,0.05),
-                -5px -5px 5px rgba(255,255,255,0.5);
+    box-shadow:
+        inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+        5px 5px 5px rgba(0, 0, 0, 0.05),
+        -5px -5px 5px rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     margin: 15px;
 }
@@ -432,7 +421,7 @@ footer {
 
 .contenedor-noticias .card .box .contenido h2 {
     position: absolute;
-    user-select:none;
+    user-select: none;
     top: -10px;
     right: 30px;
     font-size: 8em;
@@ -482,30 +471,120 @@ footer {
 .contenedor-noticias .card:hover .box .contenido a {
     background: #ff568f;
 }
-/****** Politicas de privacidad ******/
 
-.politicas{
+/*********************  Politicas y Privacidad *********************/
+
+.politicas {
     display: flex;
     justify-content: center;
     margin: 2em 0em 2em 0em;
 }
 
-h4{
+h4 {
     margin: 1em 0em 1em 0em;
 }
 
 
+/*********************  Pagina de Contacto *********************/
 
-/****** Responsive ******/
+.contacto img {
+    width: 100%;
+    height: 35vh;
+    position: relative;
+}
+
+.contactotitulo {
+    justify-content: center;
+}
+
+.contactotitulo h1 {
+    position: absolute;
+    top: 26%;
+    text-align: center;
+}
+
+#contenedor-contacto {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.inner {
+    overflow: hidden;
+}
+
+.inner img {
+    transition: all 1.5s ease;
+}
+
+.inner:hover img {
+    transform: scale(1.3);
+}
+
+/*********************  Formulario Contacto *********************/
+
+.get_in_touch {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0, 1);
+    padding: 30px;
+}
+
+.get_in_touch .title {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 3em;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: #5543ca;
+    background-color: linear-gradien(to right, #f4524d 0%, #5543ca 100%);
+}
+
+.contact-form .form-field {
+    position: relative;
+    margin: 32px, 0;
+}
+
+.contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #5543ca;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+/*********************  Animacion de las ilustraciones *********************/
+
+@keyframes mover {
+    0% {
+        transform: translate(100%);
+    }
+}
+
+@keyframes moverder {
+    0% {
+        transform: translate(-100%);
+    }
+}
+
+
+/*******************************  Manejo Responsive *******************************/
 
 @media (max-width: 1200px) {
+
+    /* 1200 px para abajo*/
     .titulo-servicios h1 {
         font-size: 11vh;
     }
-
 }
 
 @media (max-width: 992px) {
+
+    /* 992 px para abajo*/
     .ilustracion1 img {
         width: 60%;
     }
@@ -520,10 +599,13 @@ h4{
 }
 
 @media (max-width: 768px) {
+
+    /* 768 px para abajo*/
     .ilustracion1 img {
         width: 80%;
     }
-    .contactotitulo h1{
+
+    .contactotitulo h1 {
         font-size: 8vh;
     }
 
@@ -537,78 +619,25 @@ h4{
 }
 
 @media (max-width: 576px) {
+
+    /* 576 px para abajo*/
     .titulo-servicios h1 {
         font-size: 5vh;
     }
-    .contactotitulo h1{
+
+    .contactotitulo h1 {
         font-size: 7vh;
     }
 }
 
 @media (max-width: 400px) {
+
+    /* 400 px para abajo*/
     .titulo-servicios h1 {
         font-size: 3vh;
     }
-    .contactotitulo h1{
+
+    .contactotitulo h1 {
         font-size: 7vh;
     }
 }
-/****** anim imag ******/
-@keyframes mover{
-    0%{
-        transform: translate(100%);
-    }
-}
-
-@keyframes moverder{
-    0%{
-        transform: translate(-100%);
-    }
-}
-/****Formulario Contacto****/
-.get_in_touch{
-    max-width: 800px;
-    margin: 50px auto;
-    position: relative;
-    box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0, 1);
-    padding: 30px;
-}
-.get_in_touch .title{
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 3px;
-    font-size: 3em;
-    line-height: 48px;
-    padding-bottom: 20px;
-    color: #5543ca;
-    background-color: linear-gradien(to right, #f4524d 0%, #5543ca 100%);
-}
-.contact-form .form-field{
-    position: relative;
-    margin: 32px, 0;
-}
-.contact-form .input-text{
-    display: block;
-    width: 100%;
-    height: 36px;
-    border-width: 0 0 2px 0;
-    border-color: #5543ca;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 400;
-}
-/***Contacto Pagina principal***/
-#contenedor-contacto{
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.inner{
-    overflow: hidden;
-}
-.inner img{
-    transition: all 1.5s ease;
-}
-.inner:hover img{
-    transform: scale(1.5);
-}
-
