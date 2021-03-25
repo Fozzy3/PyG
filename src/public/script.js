@@ -59,7 +59,9 @@ if (typeof (window) !== 'undefined') {
         }
     })
 }
-/* *** Funciones Varios *** */
+
+/**** Funciones Varios ****/
+
 function nosotros() {
     var elmnt = document.getElementById("nosotros");
     elmnt.scrollIntoView();

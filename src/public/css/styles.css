@@ -11,6 +11,10 @@ body {
     font-weight: 400;
 }
 
+h1{
+    font-family: 'Montserrat';
+}
+
 h5 {
     font-size: 20px;
     margin: 12px 0 12px 0;
@@ -239,6 +243,7 @@ footer {
     text-align: center;
 }
 /****** anim botones ******/
+
 .contenido figure{
     display:block;
     margin:auto;
@@ -299,6 +304,173 @@ footer {
     max-width: 220px;
     margin: auto;
 }
+
+/********Actualidad***********/
+
+.actualidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+
+.list-group-item, .list-group-item.active{
+  width: 61%;
+  color: fff;
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #3e4348;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item:hover{
+    background: linear-gradient(45deg, #BCCEA3, #f8f78e);
+    color: rgb(22, 22, 22);
+    border: none;
+    width: 62%;
+}   
+
+.list-group{
+    position: fixed;
+    left: 20px  ;
+    width: 20%;
+}
+
+.scrollspy-example{
+    user-select: none;
+}
+.scrollspy-example h4{
+    margin: 20px;
+}
+
+
+.actualidad-pagina{ 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.actualidad-pagina .row{ 
+    width: 70%;
+}
+.contenedor-noticias {
+    display: flex;
+    justify-content: space-around;
+    max-width: 150%;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.contenedor-noticias .card {
+    position: relative;
+    width: 320px;
+    height: 440px;
+    box-shadow: 
+                inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255,255,255,0.5),
+                5px 5px 5px rgba(0,0,0,0.05),
+                -5px -5px 5px rgba(255,255,255,0.5);
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.contenedor-noticias .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #d5edff;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.contenedor-noticias .card:hover .box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgb(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #BCCEA3, #f8f78e);
+}
+
+.contenedor-noticias .card .box .contenido {
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor-noticias .card .box .contenido h2 {
+    position: absolute;
+    user-select:none;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgb(0, 0, 0, 0.02);
+    transition: 0.5s;
+    z-index: 5;
+}
+
+.contenedor-noticias .card:hover .box .contenido h2 {
+    color: rgb(0, 0, 0, 0.05);
+    z-index: 5;
+}
+
+.contenedor-noticias .card .box .contenido h3 {
+    font-size: 1.1em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.contenedor-noticias .card:hover .box .contenido h3,
+.contenedor-noticias .card:hover .box .contenido p {
+    color: rgb(0, 0, 0);
+}
+
+.contenedor-noticias .card .box .contenido p {
+    font-size: 1em;
+    font-weight: 400;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.contenedor-noticias .card .box .contenido a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--color-azul);
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+}
+
+.contenedor-noticias .card:hover .box .contenido a {
+    background: #ff568f;
+}
+<<<<<<< HEAD
+/****** Politicas de privacidad ******/
+
+.politicas{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0em 2em 0em;
+}
+
+h4{
+    margin: 1em 0em 1em 0em;
+}
+
+
+=======
+>>>>>>> Fabian
 
 /****** Responsive ******/
 
