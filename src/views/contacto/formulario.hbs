@@ -13,74 +13,23 @@
         <h1>Contacto</h1>
     </div>
 </div>
-
-<section class="get_in_touch">
-    <h1 class="title">Contactanos</h1>
-    <div class="container">
-        <div class="contact-form row">
-            <form id="task-form" action="/formulario" method="POST">
-                <div class="form-field col-lg-12">
-                    <input id="name" class="input-text" type="text" name="name">
-                    <label for="name" class="label">name</label>
-                </div>
-                <div class="form-field col-lg-12">
-                    <input id="email" class="input-text" type="email" name="email">
-                    <label for="email" class="label">email</label>
-                </div>
-                <div class="form-field col-lg-12">
-                    <input id="company" class="input-text" type="text" name="company">
-                    <label for="company" class="label">company</label>
-                </div>
-                <div class="form-field col-lg-12">
-                    <input id="phone" class="input-text" type="text" name="phone">
-                    <label for="phone" class="label">contact number</label>
-                </div>
-                <div class="form-field col-lg-12">
-                    <input id="message" class="input-text" type="text" name="message">
-                    <label for="message" class="label">Message</label>
-                </div>
-                <div class="form-field col-lg-12">
-                    <input class="submit-btn" type="submit" value="Enviar">
-                </div>
-            </form>
-        </div>
-    </div>
-
-</section>
-{{!-- 
-<div class="container p-5">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <div class="card">
-                <div class="card-body">
-                    <form id="task-form" action="/send-data" method="POST">
-
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Name " id="name" autofocus>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="mail" placeholder="Email" class="form-control" id="mail">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="phone" placeholder="Phone" class="form-control" id="phone">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="message" placeholder="Message" class="form-control" id="text">
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button class="btn btn-primary btn-block">
-                            Send
-                        </button>
-
-                    </form>
-                </div>
+<div class="general">
+    <div class="body-contact">
+        <div class="contact-in">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.60821609872!2d-74.13267728473967!3d4.663737443274331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c7c183b5caf%3A0xac7d29a15cf82ed1!2sHayuelos%20Centro%20Comercial!5e0!3m2!1ses!2sco!4v1616603313380!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="contact-form">
+                <h1>Contactanos</h1>
+                <form class="form-contact"action="">
+                    <input type="text" name="name" id="name" placeholder="Nombre" class="contact-form-txt">
+                    <input type="email" name="email" id="email" placeholder="Email" class="contact-form-txt">
+                    <input type="text" name="phone" id="phone" placeholder="Telefono" class="contact-form-txt">
+                    <input type="text" name="company" id="company" placeholder="Empresa" class="contact-form-txt">
+                    <textarea placeholder="Message" class="contact-form-txtarea"></textarea>
+                    <input type="submit" class="submit-class" value="enviar">
+                </form>
             </div>
         </div>
     </div>
-</div> --}}
+</div>
