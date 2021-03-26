@@ -589,6 +589,9 @@ h4 {
 }
 
 /****Formulario Contacto****/
+.body-contact{
+  margin: 50px;
+}
 .contact4 {
   font-family: "Montserrat", sans-serif;
 	color: #8d97ad;
