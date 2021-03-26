@@ -589,6 +589,7 @@ h4 {
 }
 
 /****Formulario Contacto****/
+
 .body-contact{
   margin: 50px;
 }
@@ -645,6 +646,11 @@ h4 {
     color: #3e4555 !important;
 }
 
+#proteccion-datos{
+  color: #fff;
+  font-size: 15px;
+}
+
 @media (min-width: 1024px) {
 	.contact4 .contact-box {
     padding: 80px 105px 80px 0px;
@@ -665,19 +671,3 @@ h4 {
 	}
 }
 
-
-/***Contacto Pagina principal***/
-
-#contenedor-contacto {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.inner {
-  overflow: hidden;
-}
-.inner img {
-  transition: all 1.5s ease;
-}
-.inner:hover img {
-  transform: scale(1.5);
-}
