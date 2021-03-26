@@ -22,6 +22,9 @@ app.use(require('./routes/index'));
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use((req, res) =>{
+    res.render('./pages/404')
+})
 
 app.listen(app.get('port'), () => {
     console.log('server on Port', app.get('port'));

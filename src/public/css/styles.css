@@ -638,11 +638,26 @@ h4 {
 }
 
 .contact4.bg-info {
-    background-color: #ff568f !important;
+    background-color: var(--color-azul) !important;
 }
 
 .contact4 .text-inverse {
     color: #3e4555 !important;
+}
+
+#proteccion-datos{
+  color: #fff;
+}
+
+/***Navegadores***/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/***Firefox***/
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 @media (min-width: 1024px) {
@@ -680,4 +695,34 @@ h4 {
 }
 .inner:hover img {
   transform: scale(1.5);
+}
+
+#botones-inicio{
+  color: transparent !important;
+}
+
+/*** Boton Top ***/
+#boton-top {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 120;
+  font-size: 35px;
+  border: none;
+  outline: none;
+  background-color: var(--color-azul);
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
