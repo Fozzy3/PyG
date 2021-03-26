@@ -118,7 +118,11 @@ svg {
 /********************* Nosotros *********************/
 
 .nosotros-seccion {
-    margin: 4rem 0rem 0rem 0rem;
+    margin: 4rem 0rem 2rem 0rem;
+}
+
+.nosotros-vector{
+    background: #f0f0f0;
 }
 
 .subtitulo {
@@ -146,17 +150,34 @@ svg {
     z-index: 1;
 }
 
-.texto span {
+.texto-nosotros span {
     color: #01AEF2;
     width: 100%;
+    text-align: center; 
+    align-self: center;
 }
 
-.texto figure {
-    font-size: 14px;
-    width: 80%;
+.texto-nosotros{
+    padding: 0rem 0rem 0rem 5rem;
+    text-align: justify;
+
 }
 
-/********************* Animacion de los btn en Inicio (Servicios) *********************/
+.min-titulos{
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+/********************* Servicios *********************/
+
+.contenido{
+    height: 90vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#banner-servicios{
+    margin: 3rem 0rem 2rem 0rem;
+}
 
 .contenido figure {
     display: block;
