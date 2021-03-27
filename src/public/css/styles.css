@@ -297,9 +297,118 @@ svg {
 /*********************  Footer *********************/
 
 footer {
-  background-color: var(--color-amarillo);
-  height: 15vh;
+  background-color: #0B1623;
+  position: relative;
+  height: auto;
   width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+footer .row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: row;
+  margin-right: 100px;
+}
+footer .row h4{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer .row  h4:before{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: #01AEF2;
+}
+footer .log{
+  margin-right: 20px;
+  width: 25%;
+}
+.log p{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.links{
+  position: relative;
+  width: 20%;
+}
+.links ul{
+  left: -50px;
+}
+.links ul li {
+  list-style: none;
+}
+.links ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: -10px;
+  display: inline-block;
+
+}
+.links a:hover{
+  color: #fff;
+}
+.contact{
+  position: relative;
+  width: 25%;
+}
+.contact .info{
+  position: relative;
+}
+.contact .info li{
+
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.contact .info li span{
+  color:#999;
+}
+.imagen{
+  position: relative;
+  width: 15%;
+}
+.imagen img{
+  margin-top: 80px;
+  width: 260px;
+}
+.derechos{
+  margin-top: 50px;
+}
+.derechos:before{
+  align-content: center;
+  align-self: center;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 85vw;
+  background: #fff;
+  position: relative;
+  top: -55px;
+  z-index: 1;
+
+}
+.derechos p{
+  margin-top: -35px;
+  margin-bottom: -5px;
+  color: #fff;
 }
 
 /*********************  Pagina Servicios *********************/
@@ -658,7 +767,8 @@ h4 {
   color: transparent !important;
 }
 
-/*********************  Formulario de Contacto *********************/
+/****Formulario Contacto****/
+
 .body-contact{
   margin: 50px;
 }
@@ -717,6 +827,13 @@ h4 {
 
 #proteccion-datos{
   color: #fff;
+  font-size: 15px;
+}
+
+@media (min-width: 1024px) {
+	.contact4 .contact-box {
+    padding: 80px 105px 80px 0px;
+	}
 }
 
 /*********************  Validar Numeros en contacto *********************/
@@ -730,139 +847,4 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-
-/*********************  Animaciones de las Ilustraciones *********************/
-
-@keyframes mover {
-  0% {
-    transform: translate(100%);
-  }
-}
-
-@keyframes moverder {
-  0% {
-    transform: translate(-100%);
-  }
-}
-
-/*********************  Responsive *********************/
-
-
-@media (max-width: 1200px) {
-  .titulo-servicios h1 {
-    font-size: 11vh;
-  }
-  .texto-empresarial p{
-    font-size: 16px;
-  }
-  .servicios {
-    margin: 1rem 0rem 2rem 0rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .ilustracion1 img {
-    width: 60%;
-  }
-
-  .ilustracion1 {
-    width: 80%;
-  }
-  .texto-empresarial p{
-    font-size: 18px;
-  }
-
-  .titulo-servicios h1 {
-    font-size: 9vh;
-  }
-  .amarillo {
-    width: 230px;
-    height: 210px;
-    right: 11%;
-    bottom: 2%;
-    border-radius: 20px;
-  }
-  
-  .amarillo p {
-    font-size: 180%;
-  }
-
-  .min-titulos-2 {
-    font-size: 27px;
-}
-}
-
-@media (max-width: 768px) {
-  .ilustracion1 img {
-    width: 80%;
-  }
-  .contactotitulo h1 {
-    font-size: 8vh;
-  }
-
-  .ilustracion1 {
-    width: 80%;
-  }
-
-  .titulo-servicios h1 {
-    font-size: 6vh;
-  }
-  .amarillo {
-    width: 190px;
-    height: 190px;
-    right: 4%;
-    bottom: 2%;
-    border-radius: 20px;
-  }
-  
-  .amarillo p {
-    font-size: 150%;
-  }
-
-  .servicios {
-    margin: 1rem 0rem 1rem 0rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .titulo-servicios h1 {
-    font-size: 5vh;
-  }
-  .contactotitulo h1 {
-    font-size: 7vh;
-  }
-  .amarillo {
-    width: 140px;
-    height: 140px;
-    right: 4%;
-    bottom: 2%;
-    border-radius: 20px;
-  }
-  
-  .amarillo p {
-    font-size: 120%;
-  }
-}
-
-@media (max-width: 400px) {
-  .titulo-servicios h1 {
-    font-size: 3vh;
-  }
-  .contactotitulo h1 {
-    font-size: 7vh;
-  }
-
-  .amarillo {
-    width: 120px;
-    height: 120px;
-    right: 2%;
-    bottom: 4%;
-    border-radius: 15px;
-  }
-  
-  .amarillo p {
-    font-size: 100%;
-  }
-}
-
 
