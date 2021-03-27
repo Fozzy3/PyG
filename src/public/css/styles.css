@@ -1,94 +1,79 @@
+/********************* Fuentes *********************/
+
 @import url(https://fonts.googleapis.com/css?family=Lato:300|Montserrat:700,400);
 
 :root {
-    --color-gris: #202020;
-    --color-amarillo: #FACB0A;
-    --color-azul: #01AEF2;
+  --color-gris: #202020;
+  --color-amarillo: #facb0a;
+  --color-azul: #01aef2;
 }
+
+/********************* Etiquedas de raiz *********************/
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background: #F3F3F2;
 }
 
-h1{
-    font-family: 'Montserrat';
+h1 {
+  font-family: "Montserrat";
 }
 
 h5 {
-    font-size: 20px;
-    margin: 12px 0 12px 0;
+  font-size: 20px;
+  margin: 12px 0 12px 0;
 }
 
 .row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -1);
-    margin-right: 0;
-    margin-left: 0;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: 0;
+  margin-left: 0;
 }
 
+/********************* Nabvar *********************/
+
 .navbar {
-    background-color: #fff !important;
-    font-size: 20px;
+  background-color: #fff !important;
+  font-size: 20px;
 }
 
 .navbar .navbar-nav {
-    margin: 0px 50px 0px 50px;
-
+  margin: 0px 50px 0px 50px;
 }
 
 .navbar .nav-item a {
-    margin: 0 20px 0 20px;
+  margin: 0 20px 0 20px;
 }
 
 .navbar .dropdown-menu {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .dropdown-item:hover {
-    background-color: transparent !important;
-    color: black;
+  background-color: transparent !important;
+  color: black;
 }
 
 .dropdown-item {
-    color: #0d6efd;
-    font-size: 18px;
+  color: #0d6efd;
+  font-size: 18px;
 }
 
-.amarillo {
-    z-index: 4;
-    display: block;
-    width: 300px;
-    height: 300px;
-    background-color: var(--color-amarillo);
-    position: absolute;
-    right: 10%;
-    bottom: -8%;
-    border-radius: 40px;
-    box-shadow: 15px 5px 30px #222;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-
+.logo {
+    width: 130px;
+    margin: 1px;
+    padding: 0px;
 }
 
-.amarillo p {
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    padding: 10%;
-    font-size: 220%;
-    text-align: center;
-    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.501);
+/********************* Carrusel *********************/
 
-}
-
-.w-100 {
-    width: 100%;
-    height: 750px;
+.carousel-inner {
+    height: 70vh;
 }
 
 img,
@@ -98,224 +83,491 @@ svg {
     display: inline;
 }
 
+/********************* Cuadro amarillo *********************/
+
+.amarillo {
+  z-index: 4;
+  display: block;
+  width: 260px;
+  height: 260px;
+  background-color: var(--color-amarillo);
+  position: absolute;
+  right: 10%;
+  bottom: -8%;
+  border-radius: 40px;
+  box-shadow: 15px 5px 30px #222;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.amarillo p {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 10%;
+  font-size: 190%;
+  text-align: center;
+  text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.501);
+}
+
+/********************* Nosotros *********************/
+
+.nosotros-vector{
+  padding: 20px;
+  display: flex;
+  background: #e4e4e4;
+  height: 120%;
+  align-items: center;
+  justify-content: center;
+}
+.texto-empresarial{
+  text-align: justify;
+}
+.subtitulo {
+  z-index: 2;
+  margin: 3.5rem 0rem 0rem 0rem;
+}
+
+
+.min-titulos{
+  margin: 0rem 0rem 2rem 0rem;
+  color: #01aef2;
+}
+.min-titulos-2{
+  margin: 1rem 0rem 1rem 0rem;
+  color: #01aef2;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.227);
+}
+
+.icono{
+  margin: 0px 5px 0px 2rem;
+  width: 30px;
+}
+
+.texto-empresarial p{
+  font-size: 16px;
+}
+
+.servicios-seccion{
+  height: 120%;
+}
+
+.subtitulo span {
+  background-color: rgb(231, 231, 231);
+  padding: 0 0px;
+  z-index: 99;
+  position: relative;
+}
+.subtitulo::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background: #01aef2;
+  position: relative;
+  top: -45px;
+  z-index: 1;
+}
+
+.subtitulo span {
+  background-color: #F3F3F2;
+  padding: 0 2rem;
+  z-index: 99;
+  position: relative;
+}
+
+.texto figure {
+  font-size: 14px;
+  width: 80%;
+}
+
+.w-100 {
+  width: 100%;
+  height: 750px;
+}
+
+img,
+svg {
+  vertical-align: top;
+  object-fit: cover;
+  display: inline;
+}
+
 .logo {
-    width: 130px;
-    margin: 1px;
-    padding: 0px;
+  width: 130px;
+  margin: 1px;
+  padding: 0px;
 }
 
 .servicios {
-    margin: 1rem 0rem 1rem 0rem;
+  margin: 1rem 0rem 4rem 0rem;
 }
 
 .servicios img {
-    width: 300px;
-    height: 200px;
-    border-radius: 0rem 3rem 0rem 3rem;
-    object-fit: cover;
+  width: 300px;
+  height: 200px;
+  border-radius: 0rem 3rem 0rem 3rem;
+  object-fit: cover;
 }
 
-.boton {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    border-radius: 4rem;
-    width: 50%;
-    height: 12%;
-    border: none;
-    background: var(--color-azul);
-    color: #fff;
 
+/*********************  Animacion de servicios *********************/
+
+.contenido{
+  height: 120%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0rem 2rem 0rem;
 }
 
-.fondo {
-    background: url(https://i.imgur.com/9XXDoR5.png);
+.contenido figure {
+  display: block;
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 0rem 3rem 0rem 3rem;
+  cursor: pointer;
 }
 
-.contenedor {
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.contenido figure img {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
 }
 
-/****** Footer ******/
+.contenido figure .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #01aef283;
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+.contenido figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contenido figure:hover > .capa h5 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.contenido figure:hover > img {
+  transform: scale(1.3);
+}
+.contenido figure .capa h5 {
+  color: #fff;
+  font-weight: 400px;
+  margin-bottom: 120px;
+  transition: all 500ms ease-out;
+  margin-top: 20px;
+}
+
+.contenido figure .capa p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+
+/*********************  Imagen Contactanos *********************/
+
+.w-100 {
+    width: 100%;
+    height: 750px;
+}
 
 .llamanos img {
-    width: 100%;
-    height: 40vh;
+  width: 100%;
+  height: 40vh;
 }
+
+/*********************  Footer *********************/
 
 footer {
-    background-color: var(--color-amarillo);
-    height: 15vh;
-    width: 100%;
+  background-color: #0B1623;
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+footer .row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: row;
+  margin-right: 100px;
+}
+footer .row h4{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
-/****** SERVICIOS ******/
+footer .row  h4:before{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: #01AEF2;
+}
+footer .log{
+  margin-right: 20px;
+  width: 25%;
+}
+.log p{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.links{
+  position: relative;
+  width: 20%;
+}
+.links ul{
+  left: -50px;
+}
+.links ul li {
+  list-style: none;
+}
+.links ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: -10px;
+  display: inline-block;
+
+}
+.links a:hover{
+  color: #fff;
+}
+.contact{
+  position: relative;
+  width: 25%;
+}
+.contact .info{
+  position: relative;
+}
+.contact .info li{
+
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.contact .info li span{
+  color:#999;
+}
+.imagen{
+  position: relative;
+  width: 15%;
+}
+.imagen img{
+  margin-top: 80px;
+  width: 260px;
+}
+.derechos{
+  margin-top: 50px;
+}
+.derechos:before{
+  align-content: center;
+  align-self: center;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 85vw;
+  background: #fff;
+  position: relative;
+  top: -55px;
+  z-index: 1;
+
+}
+.derechos p{
+  margin-top: -35px;
+  margin-bottom: -5px;
+  color: #fff;
+}
+
+/*********************  Pagina Servicios *********************/
 
 .imgservicios img {
-    width: 110%;
+  width: 110%;
 }
 
 .titulo-servicios {
-    align-items: center;
-    justify-content: center;
-    display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .presentacion {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .titulo-servicios h1 {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 14vh;
-    width: 80%;
-    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.501);
-    object-fit: cover;
-}
-
-.servicio {
-    padding: 0px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14vh;
+  width: 80%;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.501);
+  object-fit: cover;
 }
 
 .servicio h2 {
-    margin: 10px 0px 30px 0px;
-    text-align: center;
-
+  margin: 10px 0px 30px 0px;
+  text-align: center;
 }
 
 .par {
-    background: rgba(0, 0, 0, 0.20);
-    padding: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 40px;
 }
 
 .impar {
-    padding: 40px;
+  padding: 40px;
 }
 
 .texto {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .beneficios {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .presentacion {
-    /*  display: none;*/
-    margin: 0px;
+  /*******************  display: none *********************/
+  margin: 0px;
 }
 
 .ilustracion1 {
-    display: block;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: block;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .ilustracion1 img {
-    /* Centrar Imagenes*/
-    display: block;
-    margin: auto;
-    /*******************/
-    width: 50%;
-    object-fit: cover;
+  /******************* Centrar Imagenes************************/
+  display: block;
+  margin: auto;
+  width: 50%;
+  object-fit: cover;
 }
-/****** CONTACTO ******/
+/*********************  Contacto (Banner)*********************/
 
-.contacto img{
-    width: 100%;
-    height: 50vh;
-    position: relative;
+.contacto img {
+  width: 100%;
+  height: 35vh;
+  position: relative;
 }
-.contactotitulo{
-    justify-content: center;
+.contactotitulo {
+  justify-content: center;
 }
-.contactotitulo h1{
-    position: absolute;
-    top:26%;
-    text-align: center;
+.contactotitulo h1 {
+  position: absolute;
+  top: 26%;
+  text-align: center;
 }
-/****** anim botones ******/
+/******************************* anim botones *****************/
 
-.contenido figure{
-    display:block;
-    margin:auto;
-    position:relative;
-    height: 200px;
-    width: 300px;
-    overflow: hidden;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
-    border-radius: 0rem 3rem 0rem 3rem;
-    cursor: pointer;
-}
-
-.contenido figure img{
-    width: 100%;
-    height: 100%;
-    transition: all 500ms ease-out;
-    
+.contenido figure {
+  display: block;
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 0rem 3rem 0rem 3rem;
+  cursor: pointer;
 }
 
-.contenido figure .capa{
-    position: absolute;
-    top:0;
-    width: 100%;
-    height: 100%;
-    background: #01aef283;
-    transition: all 500ms ease-out;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center;
+.contenido figure img {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
 }
 
-.contenido figure:hover > .capa{
-    opacity: 1;
-    visibility: visible;
+.contenido figure .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #01aef283;
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
 }
 
-.contenido figure:hover > .capa h5{
-    margin-top: 50px;
-    margin-bottom: 10px;
+.contenido figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
 }
 
-.contenido figure:hover > img{
-    transform: scale(1.3);
-}
-.contenido figure .capa h5{
-    color: #fff;
-    font-weight: 400px;
-    margin-bottom: 120px;
-    transition: all 500ms ease-out;
-    margin-top: 20px;
+.contenido figure:hover > .capa h5 {
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
-.contenido figure .capa p{
-    color: #fff;
-    font-size: 15px;
-    line-height: 1;
-    width: 100%;
-    max-width: 220px;
-    margin: auto;
+.contenido figure:hover > img {
+  transform: scale(1.3);
+}
+.contenido figure .capa h5 {
+  color: #fff;
+  font-weight: 400px;
+  margin-bottom: 120px;
+  transition: all 500ms ease-out;
+  margin-top: 20px;
 }
 
-/********Actualidad***********/
-
-.actualidad{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
+.contenido figure .capa p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
 }
 
+/******************************* Actualidad *************************/
 
-.list-group-item, .list-group-item.active{
+.actualidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+
+/*********************  Tarjetas de Actualidad *********************/
+.list-group-item,
+.list-group-item.active {
   width: 61%;
   color: fff;
   position: relative;
@@ -327,214 +579,269 @@ footer {
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.list-group-item:hover{
-    background: linear-gradient(45deg, #BCCEA3, #f8f78e);
-    color: rgb(22, 22, 22);
-    border: none;
-    width: 62%;
-}   
-
-.list-group{
-    position: fixed;
-    left: 20px  ;
-    width: 20%;
+.list-group-item:hover {
+  background: linear-gradient(45deg, #bccea3, #f8f78e);
+  color: rgb(22, 22, 22);
+  border: none;
+  width: 62%;
 }
 
-.scrollspy-example{
-    user-select: none;
-}
-.scrollspy-example h4{
-    margin: 20px;
+.list-group {
+  position: fixed;
+  left: 20px;
+  width: 20%;
 }
 
+.scrollspy-example {
+  user-select: none;
+}
+.scrollspy-example h4 {
+  margin: 20px;
+}
 
-.actualidad-pagina{ 
-    display: flex;
-    width: 100%;
-    justify-content: center;
+.actualidad-pagina {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
-.actualidad-pagina .row{ 
-    width: 70%;
+.actualidad-pagina .row {
+  width: 70%;
 }
+
 .contenedor-noticias {
-    display: flex;
-    justify-content: space-around;
-    max-width: 150%;
-    flex-wrap: wrap;
-    padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  max-width: 150%;
+  flex-wrap: wrap;
+  padding: 10px 0;
 }
 
 .contenedor-noticias .card {
-    position: relative;
-    width: 320px;
-    height: 440px;
-    box-shadow: 
-                inset 5px 5px 5px rgba(0,0,0,0.05),
-                inset -5px -5px 5px rgba(255,255,255,0.5),
-                5px 5px 5px rgba(0,0,0,0.05),
-                -5px -5px 5px rgba(255,255,255,0.5);
-    border-radius: 15px;
-    margin: 15px;
+  position: relative;
+  width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: 15px;
 }
 
 .contenedor-noticias .card .box {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background: #d5edff;
-    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.1);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #d5edff;
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
 }
 
 .contenedor-noticias .card:hover .box {
-    transform: translateY(-50px);
-    box-shadow: 0 10px 40px rgb(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, #BCCEA3, #f8f78e);
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px rgb(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #bccea3, #f8f78e);
 }
 
 .contenedor-noticias .card .box .contenido {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .contenedor-noticias .card .box .contenido h2 {
-    position: absolute;
-    user-select:none;
-    top: -10px;
-    right: 30px;
-    font-size: 8em;
-    color: rgb(0, 0, 0, 0.02);
-    transition: 0.5s;
-    z-index: 5;
+  position: absolute;
+  user-select: none;
+  top: -10px;
+  right: 30px;
+  font-size: 8em;
+  color: rgb(0, 0, 0, 0.02);
+  transition: 0.5s;
+  z-index: 5;
 }
 
 .contenedor-noticias .card:hover .box .contenido h2 {
-    color: rgb(0, 0, 0, 0.05);
-    z-index: 5;
+  color: rgb(0, 0, 0, 0.05);
+  z-index: 5;
 }
 
 .contenedor-noticias .card .box .contenido h3 {
-    font-size: 1.1em;
-    color: #777;
-    z-index: 1;
-    transition: 0.5s;
+  font-size: 1.1em;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
 }
 
 .contenedor-noticias .card:hover .box .contenido h3,
 .contenedor-noticias .card:hover .box .contenido p {
-    color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .contenedor-noticias .card .box .contenido p {
-    font-size: 1em;
-    font-weight: 400;
-    color: #777;
-    z-index: 1;
-    transition: 0.5s;
+  font-size: 1em;
+  font-weight: 400;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
 }
 
 .contenedor-noticias .card .box .contenido a {
-    position: relative;
-    display: inline-block;
-    padding: 8px 20px;
-    background: var(--color-azul);
-    margin-top: 15px;
-    border-radius: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400;
-    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--color-azul);
+  margin-top: 15px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
 }
 
 .contenedor-noticias .card:hover .box .contenido a {
-    background: #ff568f;
+  background: #ff568f;
 }
 /****** Politicas de privacidad ******/
 
-.politicas{
-    display: flex;
-    justify-content: center;
-    margin: 2em 0em 2em 0em;
+.politicas {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0em 2em 0em;
+}
+.texto-politicas{
+  text-align: justify;
 }
 
-h4{
-    margin: 1em 0em 1em 0em;
+h4 {
+  margin: 1em 0em 1em 0em;
 }
 
+/*********************  Boton ir hacia arriba *********************/
 
 
-/****** Responsive ******/
-
-@media (max-width: 1200px) {
-    .titulo-servicios h1 {
-        font-size: 11vh;
-    }
-
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 120;
+  font-size: 35px;
+  border: none;
+  outline: none;
+  background-color: var(--color-azul);
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 20px;
 }
 
-@media (max-width: 992px) {
-    .ilustracion1 img {
-        width: 60%;
-    }
-
-    .ilustracion1 {
-        width: 80%;
-    }
-
-    .titulo-servicios h1 {
-        font-size: 9vh;
-    }
+#myBtn:hover {
+  background-color: #555;
 }
 
-@media (max-width: 768px) {
-    .ilustracion1 img {
-        width: 80%;
-    }
-    .contactotitulo h1{
-        font-size: 8vh;
-    }
+/*********************  Contacto (Contenido)*********************/
 
-    .ilustracion1 {
-        width: 80%;
-    }
-
-    .titulo-servicios h1 {
-        font-size: 6vh;
-    }
+#contenedor-contacto {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.inner {
+  overflow: hidden;
+}
+.inner img {
+  transition: all 1.5s ease;
+}
+.inner:hover img {
+  transform: scale(1.5);
 }
 
-@media (max-width: 576px) {
-    .titulo-servicios h1 {
-        font-size: 5vh;
-    }
-    .contactotitulo h1{
-        font-size: 7vh;
-    }
+#botones-inicio{
+  color: transparent !important;
 }
 
-@media (max-width: 400px) {
-    .titulo-servicios h1 {
-        font-size: 3vh;
-    }
-    .contactotitulo h1{
-        font-size: 7vh;
-    }
+/****Formulario Contacto****/
+
+.body-contact{
+  margin: 50px;
 }
-/****** anim imag ******/
-@keyframes mover{
-    0%{
-        transform: translate(100%);
-    }
+.contact4 {
+  font-family: "Montserrat", sans-serif;
+	color: #8d97ad;
+  font-weight: 300;
 }
 
-@keyframes moverder{
-    0%{
-        transform: translate(-100%);
-    }
+.contact4 h1, .contact4 h2, .contact4 h3, .contact4 h4, .contact4 h5, .contact4 h6 {
+  color: #3e4555;
 }
+
+.contact4 .font-weight-medium {
+	font-weight: 500;
+}
+
+.contact4 .form-control {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.contact4 .form-control:focus {
+  border-color: #ffffff;
+}
+
+.contact4 input::-webkit-input-placeholder,
+.contact4 textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact4 input:-ms-input-placeholder,
+.contact4 textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact4 input::placeholder,
+.contact4 textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact4 .right-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.contact4.bg-info {
+    background-color: var(--color-azul) !important;
+}
+
+.contact4 .text-inverse {
+    color: #3e4555 !important;
+}
+
+#proteccion-datos{
+  color: #fff;
+  font-size: 15px;
+}
+
+@media (min-width: 1024px) {
+	.contact4 .contact-box {
+    padding: 80px 105px 80px 0px;
+	}
+}
+
+/*********************  Validar Numeros en contacto *********************/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+

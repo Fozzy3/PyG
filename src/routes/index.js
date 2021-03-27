@@ -1,3 +1,4 @@
+  
 const router = require('express').Router();
 
 const admin = require('firebase-admin')
@@ -28,28 +29,19 @@ router.get('/contacto', (req, res) => {
     res.render('pages/contacto');
 });
 
-router.get('/contacto/formulario', (req, res) => {
-    res.render('contacto/formulario')
-})
-
-router.get('/contacto/agradecimiento-contacto', (req, res) => {
+router.get('/contacto/formulario/agradecimiento-contacto', (req, res) => {
     res.render('contacto/agradecimiento');
 });
 
-router.get('/contacto/como-llegar', (req, res) => {
-    res.render('contacto/mapa')
-})
-
-router.get('/contacto/pongase-en-contacto', (req, res) => {
+router.get('/contacto/proteccion-datos', (req, res) => {
     res.render('contacto/proteccion-datos')
 })
 
-router.post('/send-data', async (req, res) => {
-    const { name, mail, phone, message } = req.body;
+router.post('/formulario', async  (req, res) => {
+    const { name, email, phone, message, company} = req.body;
     const errors = [];
-    const good = [];
 
-    if(!name || !mail || !phone || !message) {
+    if(!name || !email || !phone || !message|| !company ){
         errors.push({text: 'Por favor complete todos los datos para continuar'});
     }
     if(errors.length > 0){
@@ -60,13 +52,14 @@ router.post('/send-data', async (req, res) => {
     else {
         const newContanct = {
             nombre: req.body.name,
-            mail: req.body.mail,
+            email: req.body.email,
             telefono: req.body.phone,
-            mensaje: req.body.message
+            mensaje: req.body.message,
+            empresa: req.body.company
         };
         
-        await db.ref('posibles-clientes').push(newContanct);
-        res.redirect('/contacto/agradecimiento-contacto');
+        db.ref('posibles-clientes').push(newContanct);
+        res.redirect('/contacto/formulario/agradecimiento-contacto');
     }
 })
 
