@@ -261,7 +261,7 @@ footer {
 }
 
 .presentacion {
-  /*  display: none;*/
+  /*******************  display: none *********************/
   margin: 0px;
 }
 
@@ -274,7 +274,7 @@ footer {
 }
 
 .ilustracion1 img {
-  /* Centrar Imagenes*/
+  /******************* Centrar Imagenes************************/
   display: block;
   margin: auto;
   /*******************/
@@ -296,7 +296,7 @@ footer {
   top: 26%;
   text-align: center;
 }
-/****** anim botones ******/
+/******************************* anim botones *****************/
 
 .contenido figure {
   display: block;
@@ -358,7 +358,7 @@ footer {
   margin: auto;
 }
 
-/********Actualidad***********/
+/******************************* Actualidad *************************/
 
 .actualidad {
   display: flex;
