@@ -724,6 +724,10 @@ input[type=number] {
   .amarillo p {
     font-size: 180%;
   }
+
+  .min-titulos-2 {
+    font-size: 27px;
+}
 }
 
 @media (max-width: 768px) {
