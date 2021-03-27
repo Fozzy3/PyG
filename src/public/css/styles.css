@@ -235,11 +235,116 @@ svg {
 /*********************  Footer *********************/
 
 footer {
-    background-color: var(--color-amarillo);
-    height: 15vh;
+    background-color: #0B1623;
+    position: relative;
+    height: auto;
     width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-direction: row;
+    margin-right: 100px;
+}
+footer .container h4{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 
+footer .container  h4:before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #01AEF2;
+}
+footer .log{
+    margin-right: 20px;
+    width: 25%;
+}
+.log p{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.links{
+    position: relative;
+    width: 20%;
+}
+.links ul{
+    left: -50px;
+}
+.links ul li {
+    list-style: none;
+}
+.links ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: -10px;
+    display: inline-block;
+    
+}
+.links a:hover{
+    color: #fff;
+}
+.contact{
+    position: relative;
+    width: 25%;
+}
+.contact .info{
+    position: relative;
+}
+.contact .info li{
+
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contact .info li span{
+    color:#999;
+}
+.imagen{
+    position: relative;
+    width: 15%;
+}
+.imagen img{
+    margin-top: 80px;
+    width: 260px;
+}
+.derechos{
+    margin-top: 50px;
+}
+.derechos:before{
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 85vw;
+    background: #fff;
+    position: relative;
+    top: -55px;
+    z-index: 1;
+    
+}
+.derechos p{
+    margin-top: -35px;
+    margin-bottom: -5px;
+    color: #fff;
+}
 /*********************  Pagina Servicios *********************/
 
 .imgservicios img {
