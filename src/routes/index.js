@@ -29,17 +29,9 @@ router.get('/contacto', (req, res) => {
     res.render('pages/contacto');
 });
 
-router.get('/contacto/formulario', (req, res) => {
-    res.render('contacto/formulario')
-})
-
 router.get('/contacto/formulario/agradecimiento-contacto', (req, res) => {
     res.render('contacto/agradecimiento');
 });
-
-router.get('/contacto/como-llegar', (req, res) => {
-    res.render('contacto/mapa')
-})
 
 router.get('/contacto/proteccion-datos', (req, res) => {
     res.render('contacto/proteccion-datos')
@@ -53,7 +45,7 @@ router.post('/formulario', async  (req, res) => {
         errors.push({text: 'Por favor complete todos los datos para continuar'});
     }
     if(errors.length > 0){
-        res.render('contacto/formulario', {
+        res.render('pages/contacto', {
             errors,
         });
     } 
