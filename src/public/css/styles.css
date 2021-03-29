@@ -49,7 +49,22 @@ h5 {
 .navbar .nav-item a {
   margin: 0 20px 0 20px;
 }
+/*
+.navbar .este .nav-item::after{
+  align-items: center;
+  content: "";  
+  height: 3px;
+  width: 0%;
+  background: #facb0a;
+  position: absolute;
+  bottom: 20px;
+  transition: 0.4s ease-out;
+}
 
+.navbar .nav-item:hover::after{
+  width: 110px;
+}
+*/
 .navbar .dropdown-menu {
   background-color: #fff;
 }
@@ -57,6 +72,13 @@ h5 {
 .dropdown-item:hover {
   background-color: transparent !important;
   color: black;
+}
+
+.collapse .navbar-collapse{
+  justify-content: space-evenly;
+}
+.navbar .nav-item a {
+  margin: 0 20px 0 20px;
 }
 
 .dropdown-item {
@@ -248,7 +270,7 @@ svg {
   background: #01aef283;
   transition: all 500ms ease-out;
   opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   text-align: center;
 }
 
@@ -298,23 +320,10 @@ svg {
 
 footer {
   background-color: #0B1623;
-  position: relative;
-  height: auto;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
+  padding: 20px 90px;
   justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
-footer .row{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-  flex-direction: row;
-  margin-right: 100px;
-}
+
 footer .row h4{
   position: relative;
   color: #fff;
@@ -331,10 +340,7 @@ footer .row  h4:before{
   height: 2px;
   background: #01AEF2;
 }
-footer .log{
-  margin-right: 20px;
-  width: 25%;
-}
+
 .log p{
   color: #999;
   text-decoration: none;
@@ -344,15 +350,18 @@ footer .log{
 
 .links{
   position: relative;
-  width: 20%;
+  padding-left: 4rem;
 }
 .links ul{
   left: -50px;
+  padding-left: 0;
 }
 .links ul li {
   list-style: none;
 }
 .links ul li a{
+  padding-left: 0;
+  list-style: none;
   color: #999;
   text-decoration: none;
   margin-bottom: -10px;
@@ -364,13 +373,11 @@ footer .log{
 }
 .contact{
   position: relative;
-  width: 25%;
 }
 .contact .info{
   position: relative;
 }
 .contact .info li{
-
   margin-bottom: 16px;
 }
 .contact .info li span:nth-child(1){
@@ -383,11 +390,14 @@ footer .log{
 }
 .imagen{
   position: relative;
-  width: 15%;
+  display: block;
+  margin: auto;
 }
 .imagen img{
-  margin-top: 80px;
-  width: 260px;
+  
+  position: relative;
+  width: 30vh;
+  
 }
 .derechos{
   margin-top: 50px;
@@ -398,19 +408,20 @@ footer .log{
   content: "";
   display: inline-block;
   height: 2px;
-  width: 85vw;
+  width: 100%;
   background: #fff;
   position: relative;
   top: -55px;
   z-index: 1;
-
 }
 .derechos p{
   margin-top: -35px;
   margin-bottom: -5px;
   color: #fff;
 }
-
+.derechos p a{
+  color: #fff;
+}
 /*********************  Pagina Servicios *********************/
 
 .imgservicios img {
@@ -889,6 +900,10 @@ input[type=number] {
   .amarillo p {
     font-size: 120%;
   }
+  .links{
+    position: relative;
+    padding-left: 0rem;
+  }
 }
 
 @media (max-width: 400px) {
@@ -910,6 +925,7 @@ input[type=number] {
   .amarillo p {
     font-size: 100%;
   }
+
 }
 
 
