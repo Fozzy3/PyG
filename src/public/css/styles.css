@@ -49,8 +49,8 @@ h5 {
 .navbar .nav-item a {
   margin: 0 20px 0 20px;
 }
-/*
-.navbar .este .nav-item::after{
+
+.navbar .nav-item::after{
   align-items: center;
   content: "";  
   height: 3px;
@@ -64,7 +64,7 @@ h5 {
 .navbar .nav-item:hover::after{
   width: 110px;
 }
-*/
+
 .navbar .dropdown-menu {
   background-color: #fff;
 }
