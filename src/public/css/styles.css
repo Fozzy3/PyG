@@ -763,6 +763,11 @@ h4 {
 #botones-inicio{
   color: transparent !important;
 }
+#map {
+	height: 662px;
+	width: 101.2%;
+}
+
 
 /****Formulario Contacto****/
 
