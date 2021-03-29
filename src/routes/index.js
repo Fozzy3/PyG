@@ -29,7 +29,7 @@ router.get('/contacto', (req, res) => {
     res.render('pages/contacto');
 });
 
-router.get('/contacto/formulario/agradecimiento-contacto', (req, res) => {
+router.get('/contacto/agradecimiento-contacto', (req, res) => {
     res.render('contacto/agradecimiento');
 });
 
@@ -41,12 +41,12 @@ router.post('/formulario', async  (req, res) => {
     const { name, email, phone, message, company} = req.body;
     const errors = [];
 
-    if(!name || !email || !phone || !message|| !company ){
+    if(!name || !email || !phone || !company ){
         errors.push({text: 'Por favor complete todos los datos para continuar'});
     }
     if(errors.length > 0){
         res.render('pages/contacto', {
-            errors,
+            errors
         });
     } 
     else {
@@ -59,7 +59,9 @@ router.post('/formulario', async  (req, res) => {
         };
         
         db.ref('posibles-clientes').push(newContanct);
-        res.redirect('/contacto/formulario/agradecimiento-contacto');
+        res.redirect('/contacto/agradecimiento-contacto');
+        const form = document.getElementById('task-form')
+        form.reset()
     }
 })
 

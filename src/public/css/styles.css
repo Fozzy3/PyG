@@ -50,6 +50,21 @@ h5 {
   margin: 0 20px 0 20px;
 }
 
+.navbar .nav-item::after{
+  align-items: center;
+  content: "";  
+  height: 3px;
+  width: 0%;
+  background: #facb0a;
+  position: absolute;
+  bottom: 20px;
+  transition: 0.4s ease-out;
+}
+
+.navbar .nav-item:hover::after{
+  width: 110px;
+}
+
 .navbar .dropdown-menu {
   background-color: #fff;
 }
@@ -57,6 +72,13 @@ h5 {
 .dropdown-item:hover {
   background-color: transparent !important;
   color: black;
+}
+
+.collapse .navbar-collapse{
+  justify-content: space-evenly;
+}
+.navbar .nav-item a {
+  margin: 0 20px 0 20px;
 }
 
 .dropdown-item {
@@ -248,7 +270,7 @@ svg {
   background: #01aef283;
   transition: all 500ms ease-out;
   opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   text-align: center;
 }
 
@@ -298,23 +320,10 @@ svg {
 
 footer {
   background-color: #0B1623;
-  position: relative;
-  height: auto;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
+  padding: 20px 90px;
   justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
-footer .row{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-  flex-direction: row;
-  margin-right: 100px;
-}
+
 footer .row h4{
   position: relative;
   color: #fff;
@@ -331,10 +340,7 @@ footer .row  h4:before{
   height: 2px;
   background: #01AEF2;
 }
-footer .log{
-  margin-right: 20px;
-  width: 25%;
-}
+
 .log p{
   color: #999;
   text-decoration: none;
@@ -344,15 +350,18 @@ footer .log{
 
 .links{
   position: relative;
-  width: 20%;
+  padding-left: 4rem;
 }
 .links ul{
   left: -50px;
+  padding-left: 0;
 }
 .links ul li {
   list-style: none;
 }
 .links ul li a{
+  padding-left: 0;
+  list-style: none;
   color: #999;
   text-decoration: none;
   margin-bottom: -10px;
@@ -364,13 +373,11 @@ footer .log{
 }
 .contact{
   position: relative;
-  width: 25%;
 }
 .contact .info{
   position: relative;
 }
 .contact .info li{
-
   margin-bottom: 16px;
 }
 .contact .info li span:nth-child(1){
@@ -383,11 +390,14 @@ footer .log{
 }
 .imagen{
   position: relative;
-  width: 15%;
+  display: block;
+  margin: auto;
 }
 .imagen img{
-  margin-top: 80px;
-  width: 260px;
+  
+  position: relative;
+  width: 30vh;
+  
 }
 .derechos{
   margin-top: 50px;
@@ -398,19 +408,20 @@ footer .log{
   content: "";
   display: inline-block;
   height: 2px;
-  width: 85vw;
+  width: 100%;
   background: #fff;
   position: relative;
   top: -55px;
   z-index: 1;
-
 }
 .derechos p{
   margin-top: -35px;
   margin-bottom: -5px;
   color: #fff;
 }
-
+.derechos p a{
+  color: #fff;
+}
 /*********************  Pagina Servicios *********************/
 
 .imgservicios img {
@@ -763,6 +774,11 @@ h4 {
 #botones-inicio{
   color: transparent !important;
 }
+#map {
+	height: 662px;
+	width: 101.2%;
+}
+
 
 /****Formulario Contacto****/
 
@@ -845,3 +861,146 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+<<<<<<< HEAD
+/*********************  Animaciones de las Ilustraciones *********************/
+
+@keyframes mover {
+  0% {
+    transform: translate(100%);
+  }
+}
+
+@keyframes moverder {
+  0% {
+    transform: translate(-100%);
+  }
+}
+
+/*********************  Responsive *********************/
+
+
+@media (max-width: 1200px) {
+  .titulo-servicios h1 {
+    font-size: 11vh;
+  }
+  .texto-empresarial p{
+    font-size: 16px;
+  }
+  .servicios {
+    margin: 1rem 0rem 2rem 0rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .ilustracion1 img {
+    width: 60%;
+  }
+
+  .ilustracion1 {
+    width: 80%;
+  }
+  .texto-empresarial p{
+    font-size: 18px;
+  }
+
+  .titulo-servicios h1 {
+    font-size: 9vh;
+  }
+  .amarillo {
+    width: 230px;
+    height: 210px;
+    right: 11%;
+    bottom: 2%;
+    border-radius: 20px;
+  }
+  
+  .amarillo p {
+    font-size: 180%;
+  }
+
+  .min-titulos-2 {
+    font-size: 27px;
+}
+}
+
+@media (max-width: 768px) {
+  .ilustracion1 img {
+    width: 80%;
+  }
+  .contactotitulo h1 {
+    font-size: 8vh;
+  }
+
+  .ilustracion1 {
+    width: 80%;
+  }
+
+  .titulo-servicios h1 {
+    font-size: 6vh;
+  }
+  .amarillo {
+    width: 190px;
+    height: 190px;
+    right: 4%;
+    bottom: 2%;
+    border-radius: 20px;
+  }
+  
+  .amarillo p {
+    font-size: 150%;
+  }
+
+  .servicios {
+    margin: 1rem 0rem 1rem 0rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .titulo-servicios h1 {
+    font-size: 5vh;
+  }
+  .contactotitulo h1 {
+    font-size: 7vh;
+  }
+  .amarillo {
+    width: 140px;
+    height: 140px;
+    right: 4%;
+    bottom: 2%;
+    border-radius: 20px;
+  }
+  
+  .amarillo p {
+    font-size: 120%;
+  }
+  .links{
+    position: relative;
+    padding-left: 0rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .titulo-servicios h1 {
+    font-size: 3vh;
+  }
+  .contactotitulo h1 {
+    font-size: 7vh;
+  }
+
+  .amarillo {
+    width: 120px;
+    height: 120px;
+    right: 2%;
+    bottom: 4%;
+    border-radius: 15px;
+  }
+  
+  .amarillo p {
+    font-size: 100%;
+  }
+
+}
+
+
+=======
+>>>>>>> origin/Fabian
