@@ -1,7 +1,7 @@
 
 
 /* ****** Animaciones ****** */
-if (typeof (window) !== 'undefined') {
+if (window.location.pathname =="/servicios" || window.location.pathname== "/") {
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado');
         let posicionob1 = animacion.getBoundingClientRect().top;
@@ -12,7 +12,7 @@ if (typeof (window) !== 'undefined') {
         }
     })
 }
-if (typeof (window) !== 'undefined') {
+if (window.location.pathname =="/servicios"){
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado2');
         let posicionob1 = animacion.getBoundingClientRect().top;
@@ -22,9 +22,9 @@ if (typeof (window) !== 'undefined') {
             animacion.style.animation = 'mover 2s ease-out'
         }
     })
-}
 
-if (typeof (window) !== 'undefined') {
+}
+if (window.location.pathname =="/servicios"){
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado3');
         let posicionob1 = animacion.getBoundingClientRect().top;
@@ -35,8 +35,7 @@ if (typeof (window) !== 'undefined') {
         }
     })
 }
-
-if (typeof (window) !== 'undefined') {
+if (window.location.pathname =="/servicios" || window.location.pathname== "/"){
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado4');
         let posicionob1 = animacion.getBoundingClientRect().top;
@@ -48,7 +47,7 @@ if (typeof (window) !== 'undefined') {
     })
 }
 
-if (typeof (window) !== 'undefined') {
+if (window.location.pathname =="/servicios"){
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado5');
         let posicionob1 = animacion.getBoundingClientRect().top;
