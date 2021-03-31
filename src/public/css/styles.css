@@ -43,27 +43,17 @@ h5 {
 }
 
 .navbar .navbar-nav {
+  display: flex;
   margin: 0px 50px 0px 50px;
+  justify-content: end;
 }
-
-.navbar .nav-item a {
-  margin: 0 0px 0 0px;
-  padding-left: 20px;
+#navbarNavDropdown{
+  height: 100%;
 }
-
-.navbar .nav-item::after{
-  align-items: center;
-  content: "";  
-  height: 3px;
-  width: 0%;
-  background: #facb0a;
-  position: absolute;
-  bottom: 20px;
-  transition: 0.4s ease-out;
-}
-
-.navbar .nav-item:hover::after{
-  width: 110px;
+.navbar .items a {
+  justify-content: end;
+  padding: 0rem 1rem 0rem 1rem;
+  border-radius: 20px;
 }
 
 .dropdown-menu {
