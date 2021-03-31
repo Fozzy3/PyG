@@ -47,9 +47,7 @@ h5 {
   margin: 0px 50px 0px 50px;
   justify-content: end;
 }
-#navbarNavDropdown{
-  height: 100%;
-}
+
 .navbar .items a {
   justify-content: end;
   padding: 0rem 1rem 0rem 1rem;
@@ -315,14 +313,56 @@ svg {
 
 /*********************  Imagen Contactanos *********************/
 
-.w-100 {
-    width: 100%;
-    height: 750px;
+.llamanos{
+  background-size: cover;
+  background-image: linear-gradient(
+    #20202065,
+    #01aef23f
+  ),
+ url(https://i.imgur.com/w66SlSu.png);
+ width: 100%;
+ height: 40vh;
+}
+.titulo-llamanos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+.llamanos .titulo-llamanos h1{
+  font-family: "Roboto", sans-serif;
+  border-color: #000;
+  font-size: 3em;
+  color: var(--color-amarillo);
+  text-align: center;
+}
+.llamanos .titulo-llamanos h1 span{
+  font-weight: bold;
+}
+.boton-llamanos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton-llamanos > a{
+  text-decoration: none;
 }
 
-.llamanos img {
-  width: 100%;
-  height: 40vh;
+.boton-llamanos .boton{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-azul);
+  color: #fff;
+  padding: 0.3rem 4rem 0.3rem 4rem;
+  font-size: 2.3em;
+  border-radius: 30px;
+  border-color: 0px solid;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.597);
+}
+.boton-llamanos .boton p{
+  margin: 0;
 }
 
 /*********************  Footer *********************/

@@ -23,6 +23,10 @@ router.get('/actualidad', (req, res) => {
     res.render('pages/actualidad');
 });
 
+router.get('/noticias', (req, res) => {
+    res.render('pages/noticias');
+});
+
 // Pagina de Contacto
 
 router.get('/contacto', (req, res) => {
