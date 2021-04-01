@@ -1,7 +1,7 @@
 
 
 /* ****** Animaciones ****** */
-if (window.location.pathname =="/servicios" || window.location.pathname== "/") {
+if (window.location.pathname == "/servicios" || window.location.pathname == "/") {
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado');
         let posicionob1 = animacion.getBoundingClientRect().top;
@@ -12,7 +12,7 @@ if (window.location.pathname =="/servicios" || window.location.pathname== "/") {
         }
     })
 }
-if (window.location.pathname =="/servicios"){
+if (window.location.pathname == "/servicios") {
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado2');
         let posicionob1 = animacion.getBoundingClientRect().top;
@@ -24,7 +24,7 @@ if (window.location.pathname =="/servicios"){
     })
 
 }
-if (window.location.pathname =="/servicios"){
+if (window.location.pathname == "/servicios") {
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado3');
         let posicionob1 = animacion.getBoundingClientRect().top;
@@ -35,7 +35,7 @@ if (window.location.pathname =="/servicios"){
         }
     })
 }
-if (window.location.pathname =="/servicios" || window.location.pathname== "/"){
+if (window.location.pathname == "/servicios" || window.location.pathname == "/") {
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado4');
         let posicionob1 = animacion.getBoundingClientRect().top;
@@ -47,7 +47,7 @@ if (window.location.pathname =="/servicios" || window.location.pathname== "/"){
     })
 }
 
-if (window.location.pathname =="/servicios"){
+if (window.location.pathname == "/servicios") {
     window.addEventListener('scroll', function () {
         let animacion = document.getElementById('animado5');
         let posicionob1 = animacion.getBoundingClientRect().top;
@@ -327,8 +327,30 @@ function iniciarMap() {
     var marker = new google.maps.Marker({
         position: coord,
         map: map,
-        content:'<h1>Lynn MA</h1>'
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+
     });
+
+    function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
+    const contentString =
+         '<h1>pyq</h1>';
+
+    var infoWindow = new google.maps.InfoWindow({
+        content: contentString,
+    });
+
+    marker.addListener('click', toggleBounce)
+
+    marker.addListener('click', () => {
+        infoWindow.open(map, marker)
+    })
 }
 
 iniciarMap();
