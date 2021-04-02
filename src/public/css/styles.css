@@ -54,6 +54,12 @@ h5 {
   border-radius: 20px;
 }
 
+.navbar-collapse {
+   flex-basis: 100%; 
+   flex-grow: 0; 
+   align-items: center; 
+}
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -818,6 +824,15 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+/*********************  Agradecimiento *********************/
+
+.agradecimiento img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+      object-position: center center;
+}
+
 
 /*********************  Animaciones de las Ilustraciones *********************/
 
@@ -910,8 +925,14 @@ input[type=number] {
   .servicios {
     margin: 1rem 0rem 1rem 0rem;
   }
-}
 
+  .titulo-llamanos {
+    height: 25vh;
+}
+.llamanos .titulo-llamanos h1 {
+  font-size: 2em;
+}
+}
 @media (max-width: 576px) {
   .titulo-servicios h1 {
     font-size: 5vh;
@@ -957,5 +978,3 @@ input[type=number] {
   }
 
 }
-
-
