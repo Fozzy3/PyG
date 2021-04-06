@@ -978,3 +978,31 @@ input[type=number] {
   }
 
 }
+/***Contacto Pagina principal***/
+#contenedor-contacto {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.inner {
+  overflow: hidden;
+}
+.inner img {
+  transition: all 1.5s ease;
+}
+.inner:hover img {
+  transform: scale(1.5);
+}
+.card{
+  padding: 30px;
+  margin: 50px;
+}
+.shadow {
+    box-shadow: 0 0.03rem 1rem rgba(0,0,0,2)!important;
+}
+element.style {
+    width: 20rem;
+    max-width: 20rem;
+}
+.text-center  {
+    text-align: initial !important;
+}

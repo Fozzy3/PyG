@@ -1,4 +1,4 @@
-  
+
 const router = require('express').Router();
 
 const admin = require('firebase-admin')
@@ -10,6 +10,8 @@ admin.initializeApp({
 })
 
 const db = admin.database();
+
+const axios = require('axios');
 
 router.get('/', (req, res) => {
     res.render('index');
@@ -41,18 +43,18 @@ router.get('/contacto/proteccion-datos', (req, res) => {
     res.render('contacto/proteccion-datos')
 })
 
-router.post('/formulario', async  (req, res) => {
-    const { name, email, phone, message, company} = req.body;
+router.post('/formulario', async (req, res) => {
+    const { name, email, phone, message, company } = req.body;
     const errors = [];
 
-    if(!name || !email || !phone || !company ){
-        errors.push({text: 'Por favor complete todos los datos para continuar'});
+    if (!name || !email || !phone || !company) {
+        errors.push({ text: 'Por favor complete todos los datos para continuar' });
     }
-    if(errors.length > 0){
+    if (errors.length > 0) {
         res.render('pages/contacto', {
             errors
         });
-    } 
+    }
     else {
         const newContanct = {
             nombre: req.body.name,
@@ -61,7 +63,7 @@ router.post('/formulario', async  (req, res) => {
             mensaje: req.body.message,
             empresa: req.body.company
         };
-        
+
         db.ref('posibles-clientes').push(newContanct);
         res.redirect('/contacto/agradecimiento-contacto');
         const form = document.getElementById('task-form')
