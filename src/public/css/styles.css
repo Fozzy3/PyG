@@ -998,43 +998,86 @@ input[type=number] {
 .shadow {
     box-shadow: 0 0.03rem 1rem rgba(0,0,0,2)!important;
 }
-element.style {
-    width: 50rem;
+
+/******Noticias*******/
+
+.card{
+    text-align: center;
+    margin: 2rem 0rem 2rem 0rem;
+    padding: 0;
+    width: 300px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    max-height: 500px;
+    height: 500px;
+    cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
-.text-center  {
-    text-align: initial !important;
+
+.card-text {
+  text-align: justify;
+  margin: 15px 10px 15px 10px;
+  min-height: 146px;
+  max-height: 148px;
+  text-align: left;
+  overflow:hidden;
+  max-height: 100px;
+}
+
+.card-title {
+  margin-bottom: .5rem;
+}
+.dirreccion{
+  text-decoration: none;
+  color: #000;
+}
+
+#body-noticias{
+  margin: 0 2rem 0 2rem;
+}
+
+.dirreccion:hover .card{
+  transform: translateY(-15px);
+  box-shadow: 0px 12px 16px rgb(0, 0,0,0.2);
+}
+
+#body-noticias .row{
+  display: flex;
+  justify-content: center;
+}
+
+#body-noticias .row a{
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+#body-noticias .row>* {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: auto;
+  max-width: 100%;
+
+}
+.dirreccion:hover .card-title{
+  color: var(--color-gris); 
 }
 /**** mapa location ****/
-.card {
-  display: grid;
-  grid-template-columns: 300px;
-  grid-template-rows: 210px 210px 80px;
-  grid-template-areas: "image" "text" "stats";
 
-  border-radius: 18px;
-  background: white;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-  font-family: roboto;
-  text-align: center;
+.card-img{
+  border-radius: .25rem .25rem 0rem 0rem;
+  min-height: 200px;
+  min-height: 201px;
+  display: flex;
 }
-.card-image {
-  grid-area: image;
-}
-.card-text {
-  grid-area: text;
-}
-.card-stats {
-  grid-area: stats; 
-}
-.card-image {
-  grid-area: 30em;
-  background: url("https://i.imgur.com/wOXC4N5.png");
-  background-size: 100%;
-}
-.card-text {
-  grid-area: text;
-  margin: 25px;
-}
+
 .card-text .date {
   color: rgb(255, 7, 110);
   font-size:13px;
