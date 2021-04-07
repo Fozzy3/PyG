@@ -340,7 +340,10 @@ function iniciarMap() {
         }
     }
     const contentString =
-         '<h1>pyq</h1>';
+        '<div id="string-api">'+
+        '<h1>"Hola"</h1>'+
+        '</div>'
+        
 
     var infoWindow = new google.maps.InfoWindow({
         content: contentString,

@@ -1006,3 +1006,7 @@ element.style {
 .text-center  {
     text-align: initial !important;
 }
+/**** mapa location ****/
+#string-api{
+  background-color: #01aef2;
+}
