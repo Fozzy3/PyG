@@ -340,10 +340,15 @@ function iniciarMap() {
         }
     }
     const contentString =
-        '<div id="string-api">'+
-        '<h1>"Hola"</h1>'+
-        '</div>'
-        
+    '<section id="body-string">' +
+        '<div class="card">' +
+        '<div class="card-image"></div>' +
+        '<div class="card-text">' +
+        '<span class="date">4 days ago</span>' +
+        '<h2>Post One</h2>' +
+        '<p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>' +
+        '</div>' +
+    '</section>';
 
     var infoWindow = new google.maps.InfoWindow({
         content: contentString,
