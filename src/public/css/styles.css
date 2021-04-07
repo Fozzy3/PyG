@@ -987,21 +987,19 @@ input[type=number] {
   overflow: hidden;
 }
 .inner img {
-  transition: all 1.5s ease;
+  transition: all 1s ease;
 }
 .inner:hover img {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .card{
-  padding: 30px;
   margin: 50px;
 }
 .shadow {
     box-shadow: 0 0.03rem 1rem rgba(0,0,0,2)!important;
 }
 element.style {
-    width: 20rem;
-    max-width: 20rem;
+    width: 50rem;
 }
 .text-center  {
     text-align: initial !important;
