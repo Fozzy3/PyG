@@ -293,8 +293,8 @@ svg {
 }
 
 .contenido figure:hover > .capa h5 {
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .contenido figure:hover > img {
@@ -305,7 +305,7 @@ svg {
   font-weight: 400px;
   margin-bottom: 120px;
   transition: all 500ms ease-out;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .contenido figure .capa p {
@@ -584,8 +584,8 @@ footer .row  h4:before{
 }
 
 .contenido figure:hover > .capa h5 {
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin: 100px 0px 0px 0px;
+
 }
 
 .contenido figure:hover > img {
@@ -594,18 +594,17 @@ footer .row  h4:before{
 .contenido figure .capa h5 {
   color: #fff;
   font-weight: 400px;
-  margin-bottom: 120px;
   transition: all 500ms ease-out;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .contenido figure .capa p {
   color: #fff;
   font-size: 15px;
   line-height: 1;
-  width: 100%;
-  max-width: 220px;
-  margin: auto;
+  width: 220px;
+  margin: 0px;
+  display: block;
 }
 
 /******************************* Actualidad *************************/
@@ -616,7 +615,14 @@ footer .row  h4:before{
   display: flex;
   position: relative;
   z-index: 10;
-  margin: 2rem 0rem 2rem 0rem;
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+/************************** Calendario ***********************/
+
+.imgcalendario img{
+  display: block;
+  margin: auto;
 }
 
 .titulo-actualidad.uno{
@@ -628,7 +634,6 @@ footer .row  h4:before{
     background-attachment:fixed;
 }
 .titulo-actualidad.dos{
-
   background: #FFE000; 
   background: -webkit-linear-gradient(to bottom, #799F0Cae, #FFE000ae); 
   background: linear-gradient(to bottom, #799F0Cae, #FFE000ae), url(https://i.imgur.com/sMrhS79.png); 
@@ -649,6 +654,76 @@ footer .row  h4:before{
   display: block;
   margin: auto;
   color: #000000;
+}
+/*************** Noticias *****************/
+
+.card{
+  text-align: center;
+  margin: 2rem 0rem 2rem 0rem;
+  padding: 0;
+  width: 300px;
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  max-height: 500px;
+  height: 500px;
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+text-align: justify;
+margin: 15px 10px 15px 10px;
+min-height: 146px;
+max-height: 148px;
+text-align: left;
+overflow:hidden;
+max-height: 100px;
+}
+
+.card-title {
+margin-bottom: .5rem;
+}
+.dirreccion{
+text-decoration: none;
+color: #000;
+}
+
+#body-noticias{
+margin: 0 2rem 0 2rem;
+}
+
+.dirreccion:hover .card{
+transform: translateY(-15px);
+box-shadow: 0px 12px 16px rgb(0, 0,0,0.2);
+}
+
+#body-noticias .row{
+display: flex;
+justify-content: center;
+}
+
+#body-noticias .row a{
+margin: 0rem 1rem 0rem 1rem;
+}
+
+#body-noticias .row>* {
+display: flex;
+justify-content: center;
+flex-shrink: 0;
+width: auto;
+max-width: 100%;
+
+}
+.dirreccion:hover .card-title{
+color: var(--color-gris); 
 }
 
 /****** Politicas de privacidad ******/
@@ -736,11 +811,14 @@ h4 {
   color: transparent !important;
 }
 #map {
-	height: 662px;
-	width: 101.2%;
+	height: 100%;
+	width: 100%;
   margin-top: -24px;
 }
 
+input,textarea{
+  margin: .5rem 0rem .5rem 0rem;
+}
 
 /****Formulario Contacto****/
 
@@ -794,8 +872,9 @@ h4 {
   top: 0;
 }
 
-.contact4.bg-info {
-    background-color: var(--color-azul) !important;
+.contact4 {
+  background: linear-gradient(225deg, #b7e21b, var(--color-azul));
+
 }
 
 .contact4 .text-inverse {
@@ -805,12 +884,6 @@ h4 {
 #proteccion-datos{
   color: #fff;
   font-size: 15px;
-}
-
-@media (min-width: 1024px) {
-	.contact4 .contact-box {
-    padding: 80px 105px 80px 0px;
-	}
 }
 
 /*********************  Validar Numeros en contacto *********************/
@@ -977,155 +1050,4 @@ input[type=number] {
     font-size: 100%;
   }
 
-}
-/***Contacto Pagina principal***/
-#contenedor-contacto {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.inner {
-  overflow: hidden;
-}
-.inner img {
-  transition: all 1s ease;
-}
-.inner:hover img {
-  transform: scale(1.2);
-}
-.card{
-  margin: 50px;
-}
-.shadow {
-    box-shadow: 0 0.03rem 1rem rgba(0,0,0,2)!important;
-}
-
-/******Noticias*******/
-
-.card{
-    text-align: center;
-    margin: 2rem 0rem 2rem 0rem;
-    padding: 0;
-    width: 300px;
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-    max-height: 500px;
-    height: 500px;
-    cursor: pointer;
-    transition: all 0.25s;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.card-text {
-  text-align: justify;
-  margin: 15px 10px 15px 10px;
-  min-height: 146px;
-  max-height: 148px;
-  text-align: left;
-  overflow:hidden;
-  max-height: 100px;
-}
-
-.card-title {
-  margin-bottom: .5rem;
-}
-.dirreccion{
-  text-decoration: none;
-  color: #000;
-}
-
-#body-noticias{
-  margin: 0 2rem 0 2rem;
-}
-
-.dirreccion:hover .card{
-  transform: translateY(-15px);
-  box-shadow: 0px 12px 16px rgb(0, 0,0,0.2);
-}
-
-#body-noticias .row{
-  display: flex;
-  justify-content: center;
-}
-
-#body-noticias .row a{
-  margin: 0rem 1rem 0rem 1rem;
-}
-
-#body-noticias .row>* {
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0;
-  width: auto;
-  max-width: 100%;
-
-}
-.dirreccion:hover .card-title{
-  color: var(--color-gris); 
-}
-/**** mapa location ****/
-
-.card-img{
-  border-radius: .25rem .25rem 0rem 0rem;
-  min-height: 200px;
-  min-height: 201px;
-  display: flex;
-}
-
-.card-text .date {
-  color: rgb(255, 7, 110);
-  font-size:13px;
-}
-.card-text p {
-  color: grey;
-  font-size:15px;
-  font-weight: 300;
-}
-.card-text h2 {
-  margin-top:0px;
-  font-size:28px;
-}
-.card-stats {
-  grid-area: stats; 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
-}
-.card-stats .stat {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  color: white;
-  padding:10px;
-}
-#body-string{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url("");
-  overflow: hidden;
-}
-.gm-style .gm-style-iw-c {
-    position: absolute;
-    box-sizing: border-box;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    transform: translate(-50%,-100%);
-    background-color: transparent;
-    /* border-radius: 5px; */
-    padding: px;
-    box-shadow: 0 2px 7px 1px rgb(0 0 0 / 30%);
 }
