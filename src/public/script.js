@@ -90,7 +90,7 @@ function iniciarMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
         center: coord,
-        styles: [
+    /*    styles: [
             {
                 "elementType": "geometry",
                 "stylers": [
@@ -322,8 +322,9 @@ function iniciarMap() {
                     }
                 ]
             }
-        ]
+        ]*/
     });
+
     var marker = new google.maps.Marker({
         position: coord,
         map: map,
