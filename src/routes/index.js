@@ -11,7 +11,6 @@ admin.initializeApp({
 
 const db = admin.database();
 
-const axios = require('axios');
 
 router.get('/', (req, res) => {
     res.render('index');

@@ -805,6 +805,7 @@ h4 {
 #contenedor-contacto {
   margin-top: 5%;
   margin-bottom: 5%;
+
 }
 .inner {
   overflow: hidden;
@@ -819,12 +820,16 @@ h4 {
 #botones-inicio{
   color: transparent !important;
 }
+
 #map {
-  position: relative !important;
-	height: 100%;
-	width: 100%;
-  margin-top: -24px;
+	height: 72%;
+	width: 35%;
+  bottom: -160px;
+  left: 954px;
+  border-radius: 20px;
+  position: absolute;
 }
+
 
 input,textarea{
   margin: .5rem 0rem .5rem 0rem;
@@ -930,6 +935,8 @@ border-radius: 20px;
      margin: auto;
      width: auto;
    }
+/*********************  Content String *********************/
+
 /*********************  Validar Numeros en contacto *********************/
 
 input::-webkit-outer-spin-button,
