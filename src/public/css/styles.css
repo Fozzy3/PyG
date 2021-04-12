@@ -820,6 +820,7 @@ h4 {
   color: transparent !important;
 }
 #map {
+  position: relative !important;
 	height: 100%;
 	width: 100%;
   margin-top: -24px;
