@@ -822,14 +822,22 @@ h4 {
 }
 
 #map {
-	height: 72%;
-	width: 35%;
-  bottom: -160px;
-  left: 954px;
+	height: 100%;
+	width: 300%;
   border-radius: 20px;
-  position: absolute;
+  
 }
-
+.container-alpha{
+  display: flex;
+  position: relative;
+  width: 60%;
+  margin-left: 1rem;
+}
+.flex{
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
 
 input,textarea{
   margin: .5rem 0rem .5rem 0rem;
