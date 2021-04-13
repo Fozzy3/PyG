@@ -37,10 +37,26 @@ h5 {
 
 /********************* Nabvar *********************/
 
+.barrita::after{
+  left: -3px;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--color-azul);
+  transition: width .3s;
+}
+
+.barrita:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
 .navbar {
   background-color: #fff !important;
   font-size: 20px;
 }
+
 
 .navbar .navbar-nav {
   display: flex;
@@ -96,9 +112,12 @@ h5 {
 .navbar .nav-item a {
   margin: 0 20px 0 20px;
 }
-
-
-
+.navbar-light .navbar-nav .nav-link {
+  color: var(--color-gris);
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: var(--color-azul);
+}
 .logo {
     width: 130px;
     margin: 1px;
