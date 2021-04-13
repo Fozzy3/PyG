@@ -37,10 +37,26 @@ h5 {
 
 /********************* Nabvar *********************/
 
+.barrita::after{
+  left: -3px;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--color-azul);
+  transition: width .3s;
+}
+
+.barrita:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
 .navbar {
   background-color: #fff !important;
   font-size: 20px;
 }
+
 
 .navbar .navbar-nav {
   display: flex;
@@ -96,9 +112,12 @@ h5 {
 .navbar .nav-item a {
   margin: 0 20px 0 20px;
 }
-
-
-
+.navbar-light .navbar-nav .nav-link {
+  color: var(--color-gris);
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: var(--color-azul);
+}
 .logo {
     width: 130px;
     margin: 1px;
@@ -385,6 +404,9 @@ footer {
   justify-content: space-between;
   padding-bottom: 3rem;
 }
+footer .row div{
+  padding: 0;
+}
 
 footer .row h4{
   position: relative;
@@ -408,6 +430,7 @@ footer .row  h4:before{
   text-decoration: none;
   margin-bottom: 10px;
   display: inline-block;
+  padding-right: 20px;
 }
 
 .links{
@@ -641,6 +664,9 @@ footer .row  h4:before{
   background: linear-gradient(to bottom, #799F0Cae, #FFE000ae), url(https://i.imgur.com/sMrhS79.png); 
   background-size: cover;
   background-attachment:fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .titulo-actualidad.tres{
   background: #000046; 
@@ -648,7 +674,7 @@ footer .row  h4:before{
   background: linear-gradient(to right, #1CB5E0ae, #000046ae), url(https://i.imgur.com/LpBPDew.png); 
   background-size: cover;
   background-attachment:fixed;
-
+  text-align: center;
 }
 
 .titulo-actualidad h2{
@@ -658,6 +684,9 @@ footer .row  h4:before{
   margin: auto;
   color: #000000;
   text-shadow: 2px 2px 3px rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*************** Noticias *****************/
 
@@ -1087,6 +1116,10 @@ input[type=number] {
   .links{
     position: relative;
     padding-left: 0rem;
+  }
+  .contact .info{
+    position: relative;
+    padding-left: 10px;
   }
 }
 
