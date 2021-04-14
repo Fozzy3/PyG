@@ -126,6 +126,74 @@ h5 {
 
 /********************* Carrusel *********************/
 
+.abajo .carousel-caption{
+  margin-bottom: 200px;
+  margin-left: -120px;
+  font-family: "Montserrat";
+  font-weight:bold;
+  font-size: 3vh;
+
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(7, 27, 51, 0.501);
+  object-fit: cover;
+  text-align: left;
+
+}
+.abajo .carousel-caption h5{
+  font-family: "Montserrat";
+  font-weight: bolder;
+  font-size: 4vh;
+  color: #0B1623;
+  text-shadow: 3px 3px 0px rgba(7, 27, 51, 0.501);
+  text-align: left;
+
+}
+.arriba .carousel-caption{
+  margin-bottom: 500px;
+  margin-left: -120px;
+  font-family: "Montserrat";
+  font-weight:bold;
+  font-size: 3vh;
+  max-width: 60vh;
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(7, 27, 51, 0.501);
+  object-fit: cover;
+  text-align: left;
+
+}
+.arriba .carousel-caption h5{
+  font-family: "Montserrat";
+  font-weight: bolder;
+  font-size: 4vh;
+  color: #0B1623;
+  text-shadow: 3px 3px 0px rgba(7, 27, 51, 0.501);
+  text-align: left;
+
+}
+.derecha .carousel-caption{
+  margin-bottom: 500px;
+  margin-left: 485px;
+  font-family: "Montserrat";
+  font-weight:bold;
+  font-size: 3vh;
+  max-width: 60vh;
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(7, 27, 51, 0.501);
+  object-fit: cover;
+  text-align: right;
+
+}
+.derecha .carousel-caption h5{
+  font-family: "Montserrat";
+  font-weight: bolder;
+  font-size: 4vh;
+  color: #0B1623;
+  text-shadow: 3px 3px 0px rgba(7, 27, 51, 0.501);
+  text-align: right;
+
+}
+
+
 .carousel-inner {
     height: 70vh;
 }
@@ -136,6 +204,7 @@ svg {
     object-fit: cover;
     display: inline;
 }
+
 
 /********************* Cuadro amarillo *********************/
 
@@ -407,7 +476,33 @@ footer {
 footer .row div{
   padding: 0;
 }
-
+.sci{
+  margin-left: -30px;
+  margin-top: 10px;
+  display:flex;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #13263d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.sci li a:hover{
+  background: #01aef2;
+}
+.sci li a .fa{
+  color: #fff;
+  font-size: 20px;
+}
 footer .row h4{
   position: relative;
   color: #fff;
