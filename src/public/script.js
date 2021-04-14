@@ -354,16 +354,18 @@ function iniciarMap() {
         '<ul class="info">'+
         '<p>'+
         '<li>'+
-        '<span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Dirección: 20C No. 93 - 25 Bl-3 Ap 402 Barrio Modelia Bogotá D.C<br>' +
+        '<span><i class="fa fa-map-marker" aria-hidden="true"></i></span>'+
+        '<span>20C No. 93 - 25 Bl-3 Ap 402 Barrio </span>' +
+        '<span>⠀⠀⠀Modelia Bogota D.C</span><br>'+
         '</li>'+
         '<li>'+
-        '<span><i class="fa fa-phone" aria-hidden="true"></i></span>Telefono: +57 703 1567<br>' +
+        '<span><i class="fa fa-phone" aria-hidden="true"></i></span>+57 703 1567<br>' +
         '</li>'+
         '<li>'+
-        '<span><i class="fa fa-phone" aria-hidden="true"></i></span>Celular: +57 318 391 7672<br>' +
+        '<span><i class="fa fa-phone" aria-hidden="true"></i></span>+57 318 391 7672<br>' +
         '</li>'+
         '<li>'+
-        '<span><i class="fa fa-envelope" aria-hidden="true"></i></span>Correo:  diana.parga@pyqconsultores.com<br>' +
+        '<span><i class="fa fa-envelope" aria-hidden="true"></i></span>diana.parga@pyqconsultores.com<br>' +
         '</li>'+
         '</ul>'+
         '</p>' +
