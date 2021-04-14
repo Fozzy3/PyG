@@ -477,7 +477,8 @@ footer .row div{
   padding: 0;
 }
 .sci{
-  margin-top: 20px;
+  margin-left: -30px;
+  margin-top: 10px;
   display:flex;
 }
 .sci li{
@@ -487,9 +488,21 @@ footer .row div{
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: #fff;
+  background: #13263d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  text-decoration: none;
+  border-radius: 4px;
 }
-
+.sci li a:hover{
+  background: #01aef2;
+}
+.sci li a .fa{
+  color: #fff;
+  font-size: 20px;
+}
 footer .row h4{
   position: relative;
   color: #fff;
