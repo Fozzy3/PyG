@@ -65,8 +65,6 @@ router.post('/formulario', async (req, res) => {
 
         db.ref('posibles-clientes').push(newContanct);
         res.redirect('/contacto/agradecimiento-contacto');
-        const form = document.getElementById('task-form')
-        form.reset()
     }
 })
 
