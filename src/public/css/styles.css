@@ -1086,7 +1086,15 @@ border-radius: 20px;
   padding: 8px 16px;
   background-color: #f1f1f1;
 }
+.container-string .info li span:nth-child(1){
+  color: #0B1623;
+  font-size: 20px;
+  margin-right: 10px;
+}
 
+.container-string .info{
+  margin-bottom: 16px;
+}
 
 
 
