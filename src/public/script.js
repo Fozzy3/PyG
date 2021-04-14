@@ -351,16 +351,18 @@ function iniciarMap() {
         '<h3>PyQ Consultores</h3>'+
         '</div>'+
         '<div class="container-string">' +
-        "<p>Dirección: 20C No. 93 - 25 Bl-3 Ap 402 Barrio Modelia Bogotá D.C<br>" +
+        "<p>"+
+        "Dirección: 20C No. 93 - 25 Bl-3 Ap 402 Barrio Modelia Bogotá D.C<br>" +
         "Telefono: +57 703 1567<br>" +
         "Celular: +57 318 391 7672<br>" +
         "Correo:  diana.parga@pyqconsultores.com<br>" +
-        "Nuestras Redes sociales<br>" +
         "</p>" +
         '</div>'+
         '<div class="container-string">'+
-        '<p>Nuestras Redes Sociales</p>'+
-        '<p aqui los iconos</p>'+
+        '<p>'+
+        'Nuestras Redes Sociales<br>'+
+        'aqui los iconos'+
+        '</p>'+
         '</div>'+
         '</div>'+
         "</section>";
