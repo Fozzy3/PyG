@@ -351,21 +351,36 @@ function iniciarMap() {
         '<h3>PyQ Consultores</h3>'+
         '</div>'+
         '<div class="container-string">' +
-        "<p>"+
-        "Dirección: 20C No. 93 - 25 Bl-3 Ap 402 Barrio Modelia Bogotá D.C<br>" +
-        "Telefono: +57 703 1567<br>" +
-        "Celular: +57 318 391 7672<br>" +
-        "Correo:  diana.parga@pyqconsultores.com<br>" +
-        "</p>" +
+        '<ul class="info">'+
+        '<p>'+
+        '<li>'+
+        '<span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Dirección: 20C No. 93 - 25 Bl-3 Ap 402 Barrio Modelia Bogotá D.C<br>' +
+        '</li>'+
+        '<li>'+
+        '<span><i class="fa fa-phone" aria-hidden="true"></i></span>Telefono: +57 703 1567<br>' +
+        '</li>'+
+        '<li>'+
+        '<span><i class="fa fa-phone" aria-hidden="true"></i></span>Celular: +57 318 391 7672<br>' +
+        '</li>'+
+        '<li>'+
+        '<span><i class="fa fa-envelope" aria-hidden="true"></i></span>Correo:  diana.parga@pyqconsultores.com<br>' +
+        '</li>'+
+        '</ul>'+
+        '</p>' +
         '</div>'+
         '<div class="container-string">'+
         '<p>'+
         'Nuestras Redes Sociales<br>'+
-        'aqui los iconos'+
+        '<ul class="sci">'+
+        '<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>'+
+        '<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>'+
+        '<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>'+
+        '<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>'+
+        '</ul>'+
         '</p>'+
         '</div>'+
         '</div>'+
-        "</section>";
+        '</section>';
 
     var infoWindow = new google.maps.InfoWindow({
         content: contentString,
