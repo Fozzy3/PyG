@@ -1040,7 +1040,7 @@ border-radius: 20px;
     padding: 1rem 0rem 0.3rem 0rem;
   }
 
-  #proteccion-datos{
+  .proteccion-datos{
     color: rgb(0, 0, 0);
     font-size: 0.9rem;
     width: auto;
