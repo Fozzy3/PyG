@@ -506,6 +506,7 @@ footer .row div {
   margin-left: 0px;
   margin-top: 10px;
   display: flex;
+  padding: 0;
 }
 
 element.style {
@@ -1194,7 +1195,7 @@ textarea {
 }
 
 .container-string .info {
-  margin-bottom: 16px;  
+  margin-bottom: 16px;
 }
 
 
@@ -1338,71 +1339,73 @@ input[type=number] {
   .llamanos .titulo-llamanos h1 {
     font-size: 2em;
   }
+
   .sci {
     padding: 0;
+  }
+
+  .container-string .info {
+    margin-bottom: 16px;
+    padding: 0;
+
+  }
 }
-.container-string .info {
-  margin-bottom: 16px;
-  padding: 0;
+  @media (max-width: 576px) {
+    .titulo-servicios h1 {
+      font-size: 5vh;
+    }
 
-}
+    .contactotitulo h1 {
+      font-size: 7vh;
+    }
 
-@media (max-width: 576px) {
-  .titulo-servicios h1 {
-    font-size: 5vh;
+    .amarillo {
+      width: 140px;
+      height: 140px;
+      right: 4%;
+      bottom: 2%;
+      border-radius: 20px;
+    }
+
+    .amarillo p {
+      font-size: 120%;
+    }
+
+    .links {
+      position: relative;
+      padding-left: 0rem;
+    }
+
+    .contact .info {
+      position: relative;
+      padding-left: 10px;
+    }
+
+    .sci li a {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
   }
 
-  .contactotitulo h1 {
-    font-size: 7vh;
-  }
+  @media (max-width: 400px) {
+    .titulo-servicios h1 {
+      font-size: 3vh;
+    }
 
-  .amarillo {
-    width: 140px;
-    height: 140px;
-    right: 4%;
-    bottom: 2%;
-    border-radius: 20px;
-  }
+    .contactotitulo h1 {
+      font-size: 7vh;
+    }
 
-  .amarillo p {
-    font-size: 120%;
-  }
+    .amarillo {
+      width: 120px;
+      height: 120px;
+      right: 2%;
+      bottom: 4%;
+      border-radius: 15px;
+    }
 
-  .links {
-    position: relative;
-    padding-left: 0rem;
+    .amarillo p {
+      font-size: 100%;
+    }
   }
-
-  .contact .info {
-    position: relative;
-    padding-left: 10px;
-  }
-  .sci li a {
-  width: 25px;
-  height: 25px;
-  margin-right: 5px;
-}
-}
-
-@media (max-width: 400px) {
-  .titulo-servicios h1 {
-    font-size: 3vh;
-  }
-
-  .contactotitulo h1 {
-    font-size: 7vh;
-  }
-
-  .amarillo {
-    width: 120px;
-    height: 120px;
-    right: 2%;
-    bottom: 4%;
-    border-radius: 15px;
-  }
-
-  .amarillo p {
-    font-size: 100%;
-  }
-
-}
