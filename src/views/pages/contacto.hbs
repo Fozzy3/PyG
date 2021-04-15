@@ -1,3 +1,5 @@
+<!-- Pagina de contacto -->
+
 {{#each errors }}
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
     {{text}}
@@ -12,27 +14,15 @@
     <form id="task-form" action="/formulario" method="POST">
         <div class="contenedor-contacto">
             <h2 class="title">Contactanos</h2>
-<<<<<<< HEAD
-            <input class="form-control" name="name" type="text" placeholder="Nombre" />
-            <input class="form-control" name="email" type="email" placeholder="Email" />
-            <input class="form-control" name="phone" type="number" placeholder="Telefono" />
-            <input class="form-control" name="company" type="text" placeholder="Empresa" />
-            <p class="proteccion-datos">*En caso de no poder brindar la informacion. Por favor llene el
-                espacio de la siguiente forma N/A</p>
-            <textarea class="form-control" name="message" rows="3" placeholder="Mensaje"></textarea>
-            <button class="btn boton-formulario" type="submit">enviar </button>
-            <p class="proteccion-datos">*Conozca nuestra politica de privacidad sobre el manejo que
-=======
             <input class="form-control icono" name="name" type="text" placeholder="    Nombre*" />
             <input class="form-control icono" name="email" type="email" placeholder="    Email*" />
-            <input class="form-control icono" name="phone" type="tex" placeholder="  Telefono*" />
-            <input class="form-control icono" name="company" type="text" placeholder="    Empresa*" />
-            <p id="proteccion-datos">*En caso de no poder brindar la informacion. Por favor llene el
-                espacio de la siguiente forma N/A</p>
-            <textarea class="form-control icono" name="message" rows="3" placeholder="   Mensaje"></textarea>
+            <input class="form-control icono" name="phone" type="number" placeholder="  Telefono*" />
+            <input class="form-control icono" name="company" type="text" placeholder="    Empresa* o N/A" />
+            <p class="proteccion-datos">*En caso de no poder brindar la informacion. Por favor llene el
+                espacio de la siguiente forma: N/A</p>
+            <textarea class="form-control icono" name="message" cols="2" placeholder="   Mensaje"></textarea>
             <button class=" boton-formulario" type="submit">enviar </button>
-            <p id="proteccion-datos">*Conozca nuestra politica de privacidad sobre el manejo que
->>>>>>> main
+            <p class="proteccion-datos">*Conozca nuestra politica de privacidad sobre el manejo que
                 daremos a su informacion</p>
             <a class="link-politicas" href="./contacto/proteccion-datos" target="_blank">Politicas de Privacidad</a>
         </div>

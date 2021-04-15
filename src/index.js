@@ -1,3 +1,7 @@
+
+/* Uso de handlebars */
+
+
 const express = require('express');
 const path = require('path');
 const exphs = require('express-handlebars');
@@ -5,7 +9,9 @@ const exphs = require('express-handlebars');
 
 const app = express();
 
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({
+    extended: false
+}));
 app.use(express.json());
 
 app.set('port', process.env.PORT || 3000);
@@ -22,7 +28,7 @@ app.use(require('./routes/index'));
 
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use((req, res) =>{
+app.use((req, res) => {
     res.render('./pages/404')
 })
 

@@ -1,3 +1,4 @@
+/******************************* Diversas rutas y coneccion al Url de Firebase *******************************/
 
 const router = require('express').Router();
 
@@ -20,8 +21,8 @@ router.get('/servicios', (req, res) => {
     res.render('pages/servicios');
 });
 
-router.get('/actualidad', (req, res) => {
-    res.render('pages/actualidad');
+router.get('/calendario', (req, res) => {
+    res.render('pages/calendario');
 });
 
 router.get('/noticias', (req, res) => {
@@ -43,18 +44,25 @@ router.get('/contacto/proteccion-datos', (req, res) => {
 })
 
 router.post('/formulario', async (req, res) => {
-    const { name, email, phone, message, company } = req.body;
+    const {
+        name,
+        email,
+        phone,
+        message,
+        company
+    } = req.body;
     const errors = [];
 
     if (!name || !email || !phone || !company) {
-        errors.push({ text: 'Por favor complete todos los datos para continuar' });
+        errors.push({
+            text: 'Por favor complete todos los datos para continuar'
+        });
     }
     if (errors.length > 0) {
         res.render('pages/contacto', {
             errors
         });
-    }
-    else {
+    } else {
         const newContanct = {
             nombre: req.body.name,
             email: req.body.email,
