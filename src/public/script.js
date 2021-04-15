@@ -396,3 +396,6 @@ function iniciarMap() {
 }
 
 iniciarMap();
+ function dontBack(){
+    history.forward()
+ }
