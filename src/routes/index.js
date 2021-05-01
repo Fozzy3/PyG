@@ -7,7 +7,7 @@ const serviceAccount = require('../../pyqconsultores-bd4bc-firebase-adminsdk-zy5
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://pyqconsultores-bd4bc-default-rtdb.firebaseio.com/'
+    databaseURL: process.env.EMAIL_DATA
 })
 
 const db = admin.database();
